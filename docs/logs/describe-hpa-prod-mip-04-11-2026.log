@@ -1,0 +1,157 @@
+Name:                                                  paiement-mip-04-11-2026
+Namespace:                                             prod-mip-04-11-2026
+Labels:                                                app.kubernetes.io/managed-by=kustomize
+                                                       app.kubernetes.io/part-of=comptoir-lorrain
+                                                       empreinte=MIP-04-11-2026
+                                                       env=prod
+                                                       groupe=mip
+                                                       membres=mahaut-irsutti-peiffer
+                                                       nom=peiffer
+                                                       prenom=axel
+                                                       projet=e5-5sdwana
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 10:24:58 +0100
+Reference:                                             Deployment/paiement-mip-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  4% (1m) / 70%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+      - Type: Pods     Value: 4    Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 50  Period: 30 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+Events:
+  Type     Reason                        Age    From                       Message
+  ----     ------                        ----   ----                       -------
+  Warning  FailedGetResourceMetric       12m    horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Warning  FailedComputeMetricsReplicas  12m    horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Normal   SuccessfulRescale             6m30s  horizontal-pod-autoscaler  New size: 5; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             6m14s  horizontal-pod-autoscaler  New size: 8; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             5m44s  horizontal-pod-autoscaler  New size: 10; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             4m59s  horizontal-pod-autoscaler  New size: 15; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             3m11s  horizontal-pod-autoscaler  New size: 13; reason: All metrics below target
+  Normal   SuccessfulRescale             116s   horizontal-pod-autoscaler  New size: 9; reason: All metrics below target
+  Normal   SuccessfulRescale             86s    horizontal-pod-autoscaler  New size: 6; reason: All metrics below target
+  Normal   SuccessfulRescale             71s    horizontal-pod-autoscaler  New size: 4; reason: All metrics below target
+  Normal   SuccessfulRescale             55s    horizontal-pod-autoscaler  New size: 3; reason: All metrics below target
+
+
+Name:                                                  stock-mip-04-11-2026
+Namespace:                                             prod-mip-04-11-2026
+Labels:                                                app.kubernetes.io/managed-by=kustomize
+                                                       app.kubernetes.io/part-of=comptoir-lorrain
+                                                       empreinte=MIP-04-11-2026
+                                                       env=prod
+                                                       groupe=mip
+                                                       membres=mahaut-irsutti-peiffer
+                                                       nom=peiffer
+                                                       prenom=axel
+                                                       projet=e5-5sdwana
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 10:24:58 +0100
+Reference:                                             Deployment/stock-mip-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  4% (1m) / 70%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+      - Type: Pods     Value: 4    Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 50  Period: 30 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+Events:
+  Type     Reason                        Age    From                       Message
+  ----     ------                        ----   ----                       -------
+  Warning  FailedGetResourceMetric       12m    horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Warning  FailedComputeMetricsReplicas  12m    horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Normal   SuccessfulRescale             6m45s  horizontal-pod-autoscaler  New size: 6; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             6m30s  horizontal-pod-autoscaler  New size: 9; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             6m14s  horizontal-pod-autoscaler  New size: 14; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             5m59s  horizontal-pod-autoscaler  New size: 18; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             5m44s  horizontal-pod-autoscaler  New size: 20; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             85s    horizontal-pod-autoscaler  New size: 10; reason: All metrics below target
+  Normal   SuccessfulRescale             55s    horizontal-pod-autoscaler  New size: 5; reason: All metrics below target
+  Normal   SuccessfulRescale             25s    horizontal-pod-autoscaler  New size: 3; reason: All metrics below target
+
+
+Name:                                                  vitrine-mip-04-11-2026
+Namespace:                                             prod-mip-04-11-2026
+Labels:                                                app.kubernetes.io/managed-by=kustomize
+                                                       app.kubernetes.io/part-of=comptoir-lorrain
+                                                       empreinte=MIP-04-11-2026
+                                                       env=prod
+                                                       groupe=mip
+                                                       membres=mahaut-irsutti-peiffer
+                                                       nom=peiffer
+                                                       prenom=axel
+                                                       projet=e5-5sdwana
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 10:24:58 +0100
+Reference:                                             Deployment/vitrine-mip-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  2% (1m) / 70%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+      - Type: Pods     Value: 4    Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 50  Period: 30 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+Events:
+  Type     Reason                        Age                From                       Message
+  ----     ------                        ----               ----                       -------
+  Warning  FailedGetResourceMetric       12m                horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Warning  FailedComputeMetricsReplicas  12m                horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Normal   SuccessfulRescale             6m45s              horizontal-pod-autoscaler  New size: 4; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             6m30s              horizontal-pod-autoscaler  New size: 6; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             6m14s              horizontal-pod-autoscaler  New size: 12; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             5m44s              horizontal-pod-autoscaler  New size: 16; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             5m14s              horizontal-pod-autoscaler  New size: 19; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             4m58s              horizontal-pod-autoscaler  New size: 20; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             2m26s              horizontal-pod-autoscaler  New size: 18; reason: All metrics below target
+  Normal   SuccessfulRescale             101s               horizontal-pod-autoscaler  New size: 10; reason: All metrics below target
+  Normal   SuccessfulRescale             85s                horizontal-pod-autoscaler  New size: 9; reason: All metrics below target
+  Normal   SuccessfulRescale             40s (x3 over 70s)  horizontal-pod-autoscaler  (combined from similar events): New size: 3; reason: All metrics below target

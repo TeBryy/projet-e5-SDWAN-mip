@@ -1,0 +1,53 @@
+NAME                                         READY   STATUS    RESTARTS      AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+pod/paiement-mip-04-11-2026-75c9867-5gmlx    1/1     Running   1 (16m ago)   3h15m   10.42.0.89   node-mip-04-11-2026   <none>           <none>
+pod/paiement-mip-04-11-2026-75c9867-jkw8n    1/1     Running   1 (16m ago)   3h15m   10.42.0.64   node-mip-04-11-2026   <none>           <none>
+pod/paiement-mip-04-11-2026-75c9867-wqxf7    1/1     Running   1 (16m ago)   3h15m   10.42.0.67   node-mip-04-11-2026   <none>           <none>
+pod/stock-mip-04-11-2026-c6bc99c55-2j2xb     1/1     Running   1 (16m ago)   3h15m   10.42.0.63   node-mip-04-11-2026   <none>           <none>
+pod/stock-mip-04-11-2026-c6bc99c55-8wm8j     1/1     Running   1 (16m ago)   3h15m   10.42.0.62   node-mip-04-11-2026   <none>           <none>
+pod/stock-mip-04-11-2026-c6bc99c55-hlc64     1/1     Running   1 (17m ago)   3h15m   10.42.0.65   node-mip-04-11-2026   <none>           <none>
+pod/vitrine-mip-04-11-2026-7fdf57dc7-2c9bm   1/1     Running   1 (16m ago)   3h15m   10.42.0.70   node-mip-04-11-2026   <none>           <none>
+pod/vitrine-mip-04-11-2026-7fdf57dc7-b28fr   1/1     Running   1 (16m ago)   3h15m   10.42.0.73   node-mip-04-11-2026   <none>           <none>
+pod/vitrine-mip-04-11-2026-7fdf57dc7-qwjfc   1/1     Running   1 (16m ago)   3h15m   10.42.0.72   node-mip-04-11-2026   <none>           <none>
+
+NAME                              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE     SELECTOR
+service/paiement-mip-04-11-2026   ClusterIP   10.43.22.140    <none>        8080/TCP   3h15m   app=paiement-mip-04-11-2026
+service/stock-mip-04-11-2026      ClusterIP   10.43.77.170    <none>        8080/TCP   3h15m   app=stock-mip-04-11-2026
+service/vitrine-mip-04-11-2026    ClusterIP   10.43.111.128   <none>        8080/TCP   3h15m   app=vitrine-mip-04-11-2026
+
+NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS                IMAGES                                      SELECTOR
+deployment.apps/paiement-mip-04-11-2026   3/3     3            3           3h15m   paiement-mip-04-11-2026   axelirsutti/paiement-mip-04-11-2026:1.0.0   app=paiement-mip-04-11-2026
+deployment.apps/stock-mip-04-11-2026      3/3     3            3           3h15m   stock-mip-04-11-2026      axelirsutti/stock-mip-04-11-2026:1.0.0      app=stock-mip-04-11-2026
+deployment.apps/vitrine-mip-04-11-2026    3/3     3            3           3h15m   vitrine-mip-04-11-2026    axelirsutti/vitrine-mip-04-11-2026:1.0.0    app=vitrine-mip-04-11-2026
+
+NAME                                               DESIRED   CURRENT   READY   AGE     CONTAINERS                IMAGES                                      SELECTOR
+replicaset.apps/paiement-mip-04-11-2026-75c9867    3         3         3       3h15m   paiement-mip-04-11-2026   axelirsutti/paiement-mip-04-11-2026:1.0.0   app=paiement-mip-04-11-2026,pod-template-hash=75c9867
+replicaset.apps/stock-mip-04-11-2026-c6bc99c55     3         3         3       3h15m   stock-mip-04-11-2026      axelirsutti/stock-mip-04-11-2026:1.0.0      app=stock-mip-04-11-2026,pod-template-hash=c6bc99c55
+replicaset.apps/vitrine-mip-04-11-2026-7fdf57dc7   3         3         3       3h15m   vitrine-mip-04-11-2026    axelirsutti/vitrine-mip-04-11-2026:1.0.0    app=vitrine-mip-04-11-2026,pod-template-hash=7fdf57dc7
+
+NAME                                                          REFERENCE                            TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/paiement-mip-04-11-2026   Deployment/paiement-mip-04-11-2026   cpu: 4%/70%   3         20        3          3h15m
+horizontalpodautoscaler.autoscaling/stock-mip-04-11-2026      Deployment/stock-mip-04-11-2026      cpu: 4%/70%   3         20        3          3h15m
+horizontalpodautoscaler.autoscaling/vitrine-mip-04-11-2026    Deployment/vitrine-mip-04-11-2026    cpu: 2%/70%   3         20        3          3h15m
+
+NAME                                                CLASS     HOSTS                                 ADDRESS         PORTS   AGE
+ingress.networking.k8s.io/paiement-mip-04-11-2026   traefik   paiement.dev.192.168.1.110.sslip.io   192.168.1.110   80      3h15m
+ingress.networking.k8s.io/vitrine-mip-04-11-2026    traefik   vitrine.dev.192.168.1.110.sslip.io    192.168.1.110   80      3h15m
+
+NAME                                                                     POD-SELECTOR                                                                   AGE
+networkpolicy.networking.k8s.io/allow-loadtest-mip-04-11-2026            app in (paiement-mip-04-11-2026,stock-mip-04-11-2026,vitrine-mip-04-11-2026)   3h15m
+networkpolicy.networking.k8s.io/allow-stock-interne-mip-04-11-2026       app=stock-mip-04-11-2026                                                       3h15m
+networkpolicy.networking.k8s.io/allow-traefik-publiques-mip-04-11-2026   app in (paiement-mip-04-11-2026,vitrine-mip-04-11-2026)                        3h15m
+networkpolicy.networking.k8s.io/deny-all-ingress-mip-04-11-2026          <none>                                                                         3h15m
+
+NAME                                 REQUEST                                                                                                                 LIMIT                                            AGE
+resourcequota/quota-mip-04-11-2026   pods: 9/70, requests.cpu: 300m/3, requests.memory: 144Mi/1536Mi, services.loadbalancers: 0/0, services.nodeports: 0/0   limits.cpu: 1350m/12, limits.memory: 528Mi/5Gi   3h15m
+
+NAME                                       CREATED AT
+limitrange/limites-defaut-mip-04-11-2026   2026-11-04T09:19:25Z
+
+NAME                                        DATA   AGE
+configmap/hosts-mip-04-11-2026-f4t2ff7c9g   2      3h15m
+configmap/kube-root-ca.crt                  1      3h16m
+
+NAME                           TYPE     DATA   AGE
+secret/stripe-mip-04-11-2026   Opaque   1      3h15m

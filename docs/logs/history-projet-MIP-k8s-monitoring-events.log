@@ -1,0 +1,39 @@
+LAST SEEN             TYPE      REASON             OBJECT                                                       MESSAGE
+84m (x76 over 174m)   Warning   DNSConfigForming   Pod/obs-mip-04-11-2026-prometheus-node-exporter-7dmss        Nameserver limits were exceeded, some nameservers have been omitted, the applied nameserver line is: 192.168.1.254 fd17:625c:f037:2::3 192.168.1.254
+16m                   Warning   FailedMount        Pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             MountVolume.SetUp failed for volume "tls-secret" : object "monitoring-mip-04-11-2026"/"obs-mip-04-11-2026-admission" not registered
+16m                   Normal    SandboxChanged     Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Pod sandbox changed, it will be killed and re-created.
+16m                   Normal    SandboxChanged     Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Pod sandbox changed, it will be killed and re-created.
+16m                   Normal    SandboxChanged     Pod/obs-mip-04-11-2026-prometheus-node-exporter-7dmss        Pod sandbox changed, it will be killed and re-created.
+16m                   Normal    SandboxChanged     Pod/obs-mip-04-11-2026-kube-state-metrics-8678b8c676-46gn4   Pod sandbox changed, it will be killed and re-created.
+16m                   Normal    SandboxChanged     Pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             Pod sandbox changed, it will be killed and re-created.
+16m                   Normal    Pulled             Pod/obs-mip-04-11-2026-prometheus-node-exporter-7dmss        Container image "quay.io/prometheus/node-exporter:v1.12.1-distroless" already present on machine
+16m                   Normal    Pulled             Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Container image "quay.io/kiwigrid/k8s-sidecar:2.14.3" already present on machine
+16m                   Normal    Pulled             Pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             Container image "quay.io/prometheus-operator/prometheus-operator:v0.94.2" already present on machine
+16m                   Normal    Pulled             Pod/obs-mip-04-11-2026-kube-state-metrics-8678b8c676-46gn4   Container image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0" already present on machine
+16m                   Normal    Started            Pod/obs-mip-04-11-2026-prometheus-node-exporter-7dmss        Started container node-exporter
+16m                   Normal    Created            Pod/obs-mip-04-11-2026-prometheus-node-exporter-7dmss        Created container: node-exporter
+16m                   Normal    Pulled             Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.94.2" already present on machine
+16m                   Normal    Created            Pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             Created container: kube-prometheus-stack
+16m                   Normal    Started            Pod/obs-mip-04-11-2026-kube-state-metrics-8678b8c676-46gn4   Started container kube-state-metrics
+16m                   Normal    Created            Pod/obs-mip-04-11-2026-kube-state-metrics-8678b8c676-46gn4   Created container: kube-state-metrics
+16m                   Normal    Created            Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Created container: init-config-reloader
+16m                   Normal    Created            Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Created container: grafana-sc-dashboard
+16m                   Normal    Started            Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Started container grafana-sc-datasources
+16m                   Normal    Started            Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Started container init-config-reloader
+16m                   Normal    Pulled             Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Container image "docker.io/grafana/grafana:13.3.0-distroless" already present on machine
+16m                   Normal    Started            Pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             Started container kube-prometheus-stack
+16m                   Normal    Created            Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Created container: grafana-sc-datasources
+16m                   Normal    Pulled             Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Container image "quay.io/kiwigrid/k8s-sidecar:2.14.3" already present on machine
+16m                   Normal    Started            Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Started container grafana-sc-dashboard
+16m                   Normal    Created            Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Created container: grafana
+16m                   Warning   Unhealthy          Pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             Readiness probe failed: Get "https://10.42.0.98:10250/healthz": dial tcp 10.42.0.98:10250: connect: connection refused
+16m                   Normal    Started            Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Started container grafana
+16m                   Warning   Unhealthy          Pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             Liveness probe failed: Get "https://10.42.0.98:10250/healthz": dial tcp 10.42.0.98:10250: connect: connection refused
+16m                   Normal    Pulled             Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Container image "quay.io/prometheus/prometheus:v3.15.1-distroless" already present on machine
+16m                   Normal    Created            Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Created container: prometheus
+16m                   Normal    Started            Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Started container prometheus
+16m                   Normal    Pulled             Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.94.2" already present on machine
+16m                   Normal    Created            Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Created container: config-reloader
+16m                   Normal    Started            Pod/prometheus-obs-mip-04-11-2026-prometheus-0               Started container config-reloader
+16m (x3 over 16m)     Warning   Unhealthy          Pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              Readiness probe failed: Get "http://10.42.0.95:3000/api/health": dial tcp 10.42.0.95:3000: connect: connection refused
+65s (x17 over 16m)    Warning   DNSConfigForming   Pod/obs-mip-04-11-2026-prometheus-node-exporter-7dmss        Nameserver limits were exceeded, some nameservers have been omitted, the applied nameserver line is: 192.168.1.254 2001:861:4f05:ef70:32b1:b5ff:fef0:41c 192.168.1.254

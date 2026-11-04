@@ -1,0 +1,19 @@
+# Cluster : 2026-11-04 13:35:05
+Client Version: v1.33.5+k3s1
+Kustomize Version: v5.6.0
+Server Version: v1.33.5+k3s1
+
+NAME                  STATUS   ROLES                  AGE     VERSION        INTERNAL-IP   EXTERNAL-IP     OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+node-mip-04-11-2026   Ready    control-plane,master   3h47m   v1.33.5+k3s1   10.0.2.15     192.168.1.110   Ubuntu 24.04.5 LTS   6.8.0-147-generic   containerd://2.1.4-k3s1
+
+NAME                        STATUS   AGE     LABELS
+dev-mip-04-11-2026          Active   3h16m   empreinte=MIP-04-11-2026,env=dev,groupe=mip,kubernetes.io/metadata.name=dev-mip-04-11-2026,nom=mahaut,pod-security.kubernetes.io/enforce-version=latest,pod-security.kubernetes.io/enforce=restricted,prenom=bryan
+mlops-mip-04-11-2026        Active   3h10m   empreinte=MIP-04-11-2026,env=mlops,groupe=mip,kubernetes.io/metadata.name=mlops-mip-04-11-2026,nom=mahaut,pod-security.kubernetes.io/enforce-version=latest,pod-security.kubernetes.io/enforce=restricted,prenom=bryan
+monitoring-mip-04-11-2026   Active   174m    empreinte=MIP-04-11-2026,groupe=mip,kubernetes.io/metadata.name=monitoring-mip-04-11-2026,nom=peiffer,prenom=axel
+preprod-mip-04-11-2026      Active   3h10m   empreinte=MIP-04-11-2026,env=preprod,groupe=mip,kubernetes.io/metadata.name=preprod-mip-04-11-2026,nom=mahaut,pod-security.kubernetes.io/enforce-version=latest,pod-security.kubernetes.io/enforce=restricted,prenom=bryan
+prod-mip-04-11-2026         Active   3h10m   empreinte=MIP-04-11-2026,env=prod,groupe=mip,kubernetes.io/metadata.name=prod-mip-04-11-2026,nom=mahaut,pod-security.kubernetes.io/enforce-version=latest,pod-security.kubernetes.io/enforce=restricted,prenom=bryan
+
+NAME              	NAMESPACE                	REVISION	UPDATED                                	STATUS  	CHART                        	APP VERSION
+obs-mip-04-11-2026	monitoring-mip-04-11-2026	2       	2026-11-04 10:47:56.896104234 +0100 CET	deployed	kube-prometheus-stack-92.17.1	v0.94.2    
+traefik           	kube-system              	1       	2026-11-04 08:47:39.833910014 +0000 UTC	deployed	traefik-34.2.1+up34.2.0      	v3.3.2     
+traefik-crd       	kube-system              	1       	2026-11-04 08:47:37.459455208 +0000 UTC	deployed	traefik-crd-34.2.1+up34.2.0  	v3.3.2     

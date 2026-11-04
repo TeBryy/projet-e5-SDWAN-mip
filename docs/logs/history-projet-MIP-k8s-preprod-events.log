@@ -1,0 +1,43 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                            MESSAGE
+16m         Normal    SandboxChanged                 Pod/paiement-mip-04-11-2026-845cfb65b4-wzpdj      Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/stock-mip-04-11-2026-6464c7b7b8-d8kn2         Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/paiement-mip-04-11-2026-845cfb65b4-rm855      Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/stock-mip-04-11-2026-6464c7b7b8-wnlrp         Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/vitrine-mip-04-11-2026-6456c6d944-vxlcw       Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/stock-mip-04-11-2026-6464c7b7b8-cxfr9         Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/vitrine-mip-04-11-2026-6456c6d944-9zg2d       Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/vitrine-mip-04-11-2026-6456c6d944-9zclp       Pod sandbox changed, it will be killed and re-created.
+16m         Normal    SandboxChanged                 Pod/paiement-mip-04-11-2026-845cfb65b4-8s9gf      Pod sandbox changed, it will be killed and re-created.
+16m         Normal    Pulled                         Pod/vitrine-mip-04-11-2026-6456c6d944-9zg2d       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Pulled                         Pod/paiement-mip-04-11-2026-845cfb65b4-wzpdj      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Pulled                         Pod/vitrine-mip-04-11-2026-6456c6d944-9zclp       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Pulled                         Pod/paiement-mip-04-11-2026-845cfb65b4-8s9gf      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Pulled                         Pod/stock-mip-04-11-2026-6464c7b7b8-wnlrp         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Pulled                         Pod/paiement-mip-04-11-2026-845cfb65b4-rm855      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Pulled                         Pod/vitrine-mip-04-11-2026-6456c6d944-vxlcw       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Pulled                         Pod/stock-mip-04-11-2026-6464c7b7b8-d8kn2         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Created                        Pod/vitrine-mip-04-11-2026-6456c6d944-9zclp       Created container: vitrine-mip-04-11-2026
+16m         Normal    Created                        Pod/paiement-mip-04-11-2026-845cfb65b4-wzpdj      Created container: paiement-mip-04-11-2026
+16m         Normal    Created                        Pod/vitrine-mip-04-11-2026-6456c6d944-vxlcw       Created container: vitrine-mip-04-11-2026
+16m         Normal    Created                        Pod/paiement-mip-04-11-2026-845cfb65b4-8s9gf      Created container: paiement-mip-04-11-2026
+16m         Normal    Created                        Pod/vitrine-mip-04-11-2026-6456c6d944-9zg2d       Created container: vitrine-mip-04-11-2026
+16m         Normal    Pulled                         Pod/stock-mip-04-11-2026-6464c7b7b8-cxfr9         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+16m         Normal    Created                        Pod/paiement-mip-04-11-2026-845cfb65b4-rm855      Created container: paiement-mip-04-11-2026
+16m         Normal    Created                        Pod/stock-mip-04-11-2026-6464c7b7b8-wnlrp         Created container: stock-mip-04-11-2026
+16m         Normal    Started                        Pod/paiement-mip-04-11-2026-845cfb65b4-rm855      Started container paiement-mip-04-11-2026
+16m         Normal    Created                        Pod/stock-mip-04-11-2026-6464c7b7b8-cxfr9         Created container: stock-mip-04-11-2026
+16m         Normal    Started                        Pod/paiement-mip-04-11-2026-845cfb65b4-8s9gf      Started container paiement-mip-04-11-2026
+16m         Normal    Started                        Pod/vitrine-mip-04-11-2026-6456c6d944-vxlcw       Started container vitrine-mip-04-11-2026
+16m         Normal    Started                        Pod/paiement-mip-04-11-2026-845cfb65b4-wzpdj      Started container paiement-mip-04-11-2026
+16m         Normal    Created                        Pod/stock-mip-04-11-2026-6464c7b7b8-d8kn2         Created container: stock-mip-04-11-2026
+16m         Normal    Started                        Pod/vitrine-mip-04-11-2026-6456c6d944-9zclp       Started container vitrine-mip-04-11-2026
+16m         Normal    Started                        Pod/stock-mip-04-11-2026-6464c7b7b8-wnlrp         Started container stock-mip-04-11-2026
+16m         Normal    Started                        Pod/vitrine-mip-04-11-2026-6456c6d944-9zg2d       Started container vitrine-mip-04-11-2026
+16m         Normal    Started                        Pod/stock-mip-04-11-2026-6464c7b7b8-d8kn2         Started container stock-mip-04-11-2026
+16m         Normal    Started                        Pod/stock-mip-04-11-2026-6464c7b7b8-cxfr9         Started container stock-mip-04-11-2026
+16m         Warning   FailedComputeMetricsReplicas   HorizontalPodAutoscaler/paiement-mip-04-11-2026   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m         Warning   FailedComputeMetricsReplicas   HorizontalPodAutoscaler/stock-mip-04-11-2026      invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m         Warning   FailedGetResourceMetric        HorizontalPodAutoscaler/stock-mip-04-11-2026      failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m         Warning   FailedGetResourceMetric        HorizontalPodAutoscaler/paiement-mip-04-11-2026   failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m         Warning   FailedGetResourceMetric        HorizontalPodAutoscaler/vitrine-mip-04-11-2026    failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m         Warning   FailedComputeMetricsReplicas   HorizontalPodAutoscaler/vitrine-mip-04-11-2026    invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)

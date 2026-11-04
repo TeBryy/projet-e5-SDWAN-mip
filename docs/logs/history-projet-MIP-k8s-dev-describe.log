@@ -1,0 +1,1422 @@
+Name:                   paiement-mip-04-11-2026
+Namespace:              dev-mip-04-11-2026
+CreationTimestamp:      Wed, 04 Nov 2026 10:19:25 +0100
+Labels:                 app.kubernetes.io/managed-by=kustomize
+                        app.kubernetes.io/part-of=comptoir-lorrain
+                        empreinte=MIP-04-11-2026
+                        env=dev
+                        groupe=mip
+                        membres=mahaut-irsutti-peiffer
+                        nom=irsutti
+                        prenom=axel
+                        projet=e5-5sdwana
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=paiement-mip-04-11-2026
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  0 max unavailable, 1 max surge
+Pod Template:
+  Labels:  app=paiement-mip-04-11-2026
+           app.kubernetes.io/component=paiement-stripe
+           app.kubernetes.io/managed-by=kustomize
+           app.kubernetes.io/name=paiement
+           app.kubernetes.io/part-of=comptoir-lorrain
+           empreinte=MIP-04-11-2026
+           env=dev
+           groupe=mip
+           membres=mahaut-irsutti-peiffer
+           nom=irsutti
+           prenom=axel
+           projet=e5-5sdwana
+  Containers:
+   paiement-mip-04-11-2026:
+    Image:      axelirsutti/paiement-mip-04-11-2026:1.0.0
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     150m
+      memory:  64Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:             (v1:metadata.namespace)
+      STOCK_URL:          http://stock-mip-04-11-2026:8080
+      STRIPE_SECRET_KEY:  <set to the key 'STRIPE_SECRET_KEY' in secret 'stripe-mip-04-11-2026'>  Optional: false
+    Mounts:               <none>
+  Volumes:                <none>
+  Node-Selectors:         <none>
+  Tolerations:            <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   paiement-mip-04-11-2026-75c9867 (3/3 replicas created)
+Events:          <none>
+
+
+Name:                   stock-mip-04-11-2026
+Namespace:              dev-mip-04-11-2026
+CreationTimestamp:      Wed, 04 Nov 2026 10:19:25 +0100
+Labels:                 app.kubernetes.io/managed-by=kustomize
+                        app.kubernetes.io/part-of=comptoir-lorrain
+                        empreinte=MIP-04-11-2026
+                        env=dev
+                        groupe=mip
+                        membres=mahaut-irsutti-peiffer
+                        nom=mahaut
+                        prenom=bryan
+                        projet=e5-5sdwana
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=stock-mip-04-11-2026
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  0 max unavailable, 1 max surge
+Pod Template:
+  Labels:  app=stock-mip-04-11-2026
+           app.kubernetes.io/component=backend-interne
+           app.kubernetes.io/managed-by=kustomize
+           app.kubernetes.io/name=stock
+           app.kubernetes.io/part-of=comptoir-lorrain
+           empreinte=MIP-04-11-2026
+           env=dev
+           groupe=mip
+           membres=mahaut-irsutti-peiffer
+           nom=mahaut
+           prenom=bryan
+           projet=e5-5sdwana
+  Containers:
+   stock-mip-04-11-2026:
+    Image:      axelirsutti/stock-mip-04-11-2026:1.0.0
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     100m
+      memory:  48Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_ENV:      (v1:metadata.namespace)
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   stock-mip-04-11-2026-c6bc99c55 (3/3 replicas created)
+Events:          <none>
+
+
+Name:                   vitrine-mip-04-11-2026
+Namespace:              dev-mip-04-11-2026
+CreationTimestamp:      Wed, 04 Nov 2026 10:19:25 +0100
+Labels:                 app.kubernetes.io/managed-by=kustomize
+                        app.kubernetes.io/part-of=comptoir-lorrain
+                        empreinte=MIP-04-11-2026
+                        env=dev
+                        groupe=mip
+                        membres=mahaut-irsutti-peiffer
+                        nom=irsutti
+                        prenom=axel
+                        projet=e5-5sdwana
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=vitrine-mip-04-11-2026
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  0 max unavailable, 1 max surge
+Pod Template:
+  Labels:  app=vitrine-mip-04-11-2026
+           app.kubernetes.io/component=frontend
+           app.kubernetes.io/managed-by=kustomize
+           app.kubernetes.io/name=vitrine
+           app.kubernetes.io/part-of=comptoir-lorrain
+           empreinte=MIP-04-11-2026
+           env=dev
+           groupe=mip
+           membres=mahaut-irsutti-peiffer
+           nom=irsutti
+           prenom=axel
+           projet=e5-5sdwana
+  Containers:
+   vitrine-mip-04-11-2026:
+    Image:      axelirsutti/vitrine-mip-04-11-2026:1.0.0
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     200m
+      memory:  64Mi
+    Requests:
+      cpu:      50m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:      (v1:metadata.namespace)
+      STOCK_URL:   http://stock-mip-04-11-2026:8080
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   vitrine-mip-04-11-2026-7fdf57dc7 (3/3 replicas created)
+Events:          <none>
+
+
+Name:           paiement-mip-04-11-2026-75c9867
+Namespace:      dev-mip-04-11-2026
+Selector:       app=paiement-mip-04-11-2026,pod-template-hash=75c9867
+Labels:         app=paiement-mip-04-11-2026
+                app.kubernetes.io/component=paiement-stripe
+                app.kubernetes.io/managed-by=kustomize
+                app.kubernetes.io/name=paiement
+                app.kubernetes.io/part-of=comptoir-lorrain
+                empreinte=MIP-04-11-2026
+                env=dev
+                groupe=mip
+                membres=mahaut-irsutti-peiffer
+                nom=irsutti
+                pod-template-hash=75c9867
+                prenom=axel
+                projet=e5-5sdwana
+Annotations:    deployment.kubernetes.io/desired-replicas: 3
+                deployment.kubernetes.io/max-replicas: 4
+                deployment.kubernetes.io/revision: 1
+Controlled By:  Deployment/paiement-mip-04-11-2026
+Replicas:       3 current / 3 desired
+Pods Status:    3 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=paiement-mip-04-11-2026
+           app.kubernetes.io/component=paiement-stripe
+           app.kubernetes.io/managed-by=kustomize
+           app.kubernetes.io/name=paiement
+           app.kubernetes.io/part-of=comptoir-lorrain
+           empreinte=MIP-04-11-2026
+           env=dev
+           groupe=mip
+           membres=mahaut-irsutti-peiffer
+           nom=irsutti
+           pod-template-hash=75c9867
+           prenom=axel
+           projet=e5-5sdwana
+  Containers:
+   paiement-mip-04-11-2026:
+    Image:      axelirsutti/paiement-mip-04-11-2026:1.0.0
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     150m
+      memory:  64Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:             (v1:metadata.namespace)
+      STOCK_URL:          http://stock-mip-04-11-2026:8080
+      STRIPE_SECRET_KEY:  <set to the key 'STRIPE_SECRET_KEY' in secret 'stripe-mip-04-11-2026'>  Optional: false
+    Mounts:               <none>
+  Volumes:                <none>
+  Node-Selectors:         <none>
+  Tolerations:            <none>
+Events:                   <none>
+
+
+Name:           stock-mip-04-11-2026-c6bc99c55
+Namespace:      dev-mip-04-11-2026
+Selector:       app=stock-mip-04-11-2026,pod-template-hash=c6bc99c55
+Labels:         app=stock-mip-04-11-2026
+                app.kubernetes.io/component=backend-interne
+                app.kubernetes.io/managed-by=kustomize
+                app.kubernetes.io/name=stock
+                app.kubernetes.io/part-of=comptoir-lorrain
+                empreinte=MIP-04-11-2026
+                env=dev
+                groupe=mip
+                membres=mahaut-irsutti-peiffer
+                nom=mahaut
+                pod-template-hash=c6bc99c55
+                prenom=bryan
+                projet=e5-5sdwana
+Annotations:    deployment.kubernetes.io/desired-replicas: 3
+                deployment.kubernetes.io/max-replicas: 4
+                deployment.kubernetes.io/revision: 1
+Controlled By:  Deployment/stock-mip-04-11-2026
+Replicas:       3 current / 3 desired
+Pods Status:    3 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=stock-mip-04-11-2026
+           app.kubernetes.io/component=backend-interne
+           app.kubernetes.io/managed-by=kustomize
+           app.kubernetes.io/name=stock
+           app.kubernetes.io/part-of=comptoir-lorrain
+           empreinte=MIP-04-11-2026
+           env=dev
+           groupe=mip
+           membres=mahaut-irsutti-peiffer
+           nom=mahaut
+           pod-template-hash=c6bc99c55
+           prenom=bryan
+           projet=e5-5sdwana
+  Containers:
+   stock-mip-04-11-2026:
+    Image:      axelirsutti/stock-mip-04-11-2026:1.0.0
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     100m
+      memory:  48Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_ENV:      (v1:metadata.namespace)
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Events:            <none>
+
+
+Name:           vitrine-mip-04-11-2026-7fdf57dc7
+Namespace:      dev-mip-04-11-2026
+Selector:       app=vitrine-mip-04-11-2026,pod-template-hash=7fdf57dc7
+Labels:         app=vitrine-mip-04-11-2026
+                app.kubernetes.io/component=frontend
+                app.kubernetes.io/managed-by=kustomize
+                app.kubernetes.io/name=vitrine
+                app.kubernetes.io/part-of=comptoir-lorrain
+                empreinte=MIP-04-11-2026
+                env=dev
+                groupe=mip
+                membres=mahaut-irsutti-peiffer
+                nom=irsutti
+                pod-template-hash=7fdf57dc7
+                prenom=axel
+                projet=e5-5sdwana
+Annotations:    deployment.kubernetes.io/desired-replicas: 3
+                deployment.kubernetes.io/max-replicas: 4
+                deployment.kubernetes.io/revision: 1
+Controlled By:  Deployment/vitrine-mip-04-11-2026
+Replicas:       3 current / 3 desired
+Pods Status:    3 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=vitrine-mip-04-11-2026
+           app.kubernetes.io/component=frontend
+           app.kubernetes.io/managed-by=kustomize
+           app.kubernetes.io/name=vitrine
+           app.kubernetes.io/part-of=comptoir-lorrain
+           empreinte=MIP-04-11-2026
+           env=dev
+           groupe=mip
+           membres=mahaut-irsutti-peiffer
+           nom=irsutti
+           pod-template-hash=7fdf57dc7
+           prenom=axel
+           projet=e5-5sdwana
+  Containers:
+   vitrine-mip-04-11-2026:
+    Image:      axelirsutti/vitrine-mip-04-11-2026:1.0.0
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     200m
+      memory:  64Mi
+    Requests:
+      cpu:      50m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:      (v1:metadata.namespace)
+      STOCK_URL:   http://stock-mip-04-11-2026:8080
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Events:            <none>
+
+
+Name:             paiement-mip-04-11-2026-75c9867-5gmlx
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:25 +0100
+Labels:           app=paiement-mip-04-11-2026
+                  app.kubernetes.io/component=paiement-stripe
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=paiement
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=irsutti
+                  pod-template-hash=75c9867
+                  prenom=axel
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.89
+IPs:
+  IP:           10.42.0.89
+Controlled By:  ReplicaSet/paiement-mip-04-11-2026-75c9867
+Containers:
+  paiement-mip-04-11-2026:
+    Container ID:   containerd://c1d381223d0e65e95f2eac073050af468747fa12a8b98d6aba90cd1dc4fdfb0f
+    Image:          axelirsutti/paiement-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/paiement-mip-04-11-2026@sha256:d5e59afbbd7324165120ec22e01461cd9c20770678627213db1363c72daa656f
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:31 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:30 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     150m
+      memory:  64Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:            dev-mip-04-11-2026 (v1:metadata.namespace)
+      STOCK_URL:          http://stock-mip-04-11-2026:8080
+      STRIPE_SECRET_KEY:  <set to the key 'STRIPE_SECRET_KEY' in secret 'stripe-mip-04-11-2026'>  Optional: false
+    Mounts:               <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: paiement-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container paiement-mip-04-11-2026
+
+
+Name:             paiement-mip-04-11-2026-75c9867-jkw8n
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=paiement-mip-04-11-2026
+                  app.kubernetes.io/component=paiement-stripe
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=paiement
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=irsutti
+                  pod-template-hash=75c9867
+                  prenom=axel
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.64
+IPs:
+  IP:           10.42.0.64
+Controlled By:  ReplicaSet/paiement-mip-04-11-2026-75c9867
+Containers:
+  paiement-mip-04-11-2026:
+    Container ID:   containerd://6cde15e1e8ce3cfd0d367463f9308c95d8b63d0eadf152a2f097a41d7dc5d7ec
+    Image:          axelirsutti/paiement-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/paiement-mip-04-11-2026@sha256:d5e59afbbd7324165120ec22e01461cd9c20770678627213db1363c72daa656f
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:26 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:30 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     150m
+      memory:  64Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:            dev-mip-04-11-2026 (v1:metadata.namespace)
+      STOCK_URL:          http://stock-mip-04-11-2026:8080
+      STRIPE_SECRET_KEY:  <set to the key 'STRIPE_SECRET_KEY' in secret 'stripe-mip-04-11-2026'>  Optional: false
+    Mounts:               <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: paiement-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container paiement-mip-04-11-2026
+
+
+Name:             paiement-mip-04-11-2026-75c9867-wqxf7
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=paiement-mip-04-11-2026
+                  app.kubernetes.io/component=paiement-stripe
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=paiement
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=irsutti
+                  pod-template-hash=75c9867
+                  prenom=axel
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.67
+IPs:
+  IP:           10.42.0.67
+Controlled By:  ReplicaSet/paiement-mip-04-11-2026-75c9867
+Containers:
+  paiement-mip-04-11-2026:
+    Container ID:   containerd://b61d9bbf476210cc74bca8e3c89777c7972c1697d5999b2ccb26a39bc8ce3d4e
+    Image:          axelirsutti/paiement-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/paiement-mip-04-11-2026@sha256:d5e59afbbd7324165120ec22e01461cd9c20770678627213db1363c72daa656f
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:28 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:29 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     150m
+      memory:  64Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:            dev-mip-04-11-2026 (v1:metadata.namespace)
+      STOCK_URL:          http://stock-mip-04-11-2026:8080
+      STRIPE_SECRET_KEY:  <set to the key 'STRIPE_SECRET_KEY' in secret 'stripe-mip-04-11-2026'>  Optional: false
+    Mounts:               <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: paiement-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container paiement-mip-04-11-2026
+
+
+Name:             stock-mip-04-11-2026-c6bc99c55-2j2xb
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=stock-mip-04-11-2026
+                  app.kubernetes.io/component=backend-interne
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=stock
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=mahaut
+                  pod-template-hash=c6bc99c55
+                  prenom=bryan
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.63
+IPs:
+  IP:           10.42.0.63
+Controlled By:  ReplicaSet/stock-mip-04-11-2026-c6bc99c55
+Containers:
+  stock-mip-04-11-2026:
+    Container ID:   containerd://2054f14872957b29a3b9b4ca59c01d404e6a78cf6e55f48f0f60654a0a0d6e18
+    Image:          axelirsutti/stock-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/stock-mip-04-11-2026@sha256:4f33a0d5149d8f18cf5f640736090a3147af1373842d7d58352cc582393845c7
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:26 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:30 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     100m
+      memory:  48Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_ENV:  dev-mip-04-11-2026 (v1:metadata.namespace)
+    Mounts:     <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: stock-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container stock-mip-04-11-2026
+
+
+Name:             stock-mip-04-11-2026-c6bc99c55-8wm8j
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=stock-mip-04-11-2026
+                  app.kubernetes.io/component=backend-interne
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=stock
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=mahaut
+                  pod-template-hash=c6bc99c55
+                  prenom=bryan
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.62
+IPs:
+  IP:           10.42.0.62
+Controlled By:  ReplicaSet/stock-mip-04-11-2026-c6bc99c55
+Containers:
+  stock-mip-04-11-2026:
+    Container ID:   containerd://c9eeae8db71eae630f37c248ec1c2aaae8cce50637180c3b269329c78c2cece1
+    Image:          axelirsutti/stock-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/stock-mip-04-11-2026@sha256:4f33a0d5149d8f18cf5f640736090a3147af1373842d7d58352cc582393845c7
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:25 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:30 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     100m
+      memory:  48Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_ENV:  dev-mip-04-11-2026 (v1:metadata.namespace)
+    Mounts:     <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age   From     Message
+  ----     ------          ----  ----     -------
+  Normal   SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulled          16m   kubelet  Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+  Normal   Created         16m   kubelet  Created container: stock-mip-04-11-2026
+  Normal   Started         16m   kubelet  Started container stock-mip-04-11-2026
+  Warning  Unhealthy       16m   kubelet  Readiness probe failed: Get "http://10.42.0.62:8080/readyz": dial tcp 10.42.0.62:8080: connect: connection refused
+
+
+Name:             stock-mip-04-11-2026-c6bc99c55-hlc64
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=stock-mip-04-11-2026
+                  app.kubernetes.io/component=backend-interne
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=stock
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=mahaut
+                  pod-template-hash=c6bc99c55
+                  prenom=bryan
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.65
+IPs:
+  IP:           10.42.0.65
+Controlled By:  ReplicaSet/stock-mip-04-11-2026-c6bc99c55
+Containers:
+  stock-mip-04-11-2026:
+    Container ID:   containerd://7d0dac0d1d859022d9405780b90a4567c469718ebc61f6a286f5e2f1b709a67e
+    Image:          axelirsutti/stock-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/stock-mip-04-11-2026@sha256:4f33a0d5149d8f18cf5f640736090a3147af1373842d7d58352cc582393845c7
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:27 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:30 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:07 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     100m
+      memory:  48Mi
+    Requests:
+      cpu:      25m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      APP_ENV:  dev-mip-04-11-2026 (v1:metadata.namespace)
+    Mounts:     <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: stock-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container stock-mip-04-11-2026
+
+
+Name:             vitrine-mip-04-11-2026-7fdf57dc7-2c9bm
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=vitrine-mip-04-11-2026
+                  app.kubernetes.io/component=frontend
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=vitrine
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=irsutti
+                  pod-template-hash=7fdf57dc7
+                  prenom=axel
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.70
+IPs:
+  IP:           10.42.0.70
+Controlled By:  ReplicaSet/vitrine-mip-04-11-2026-7fdf57dc7
+Containers:
+  vitrine-mip-04-11-2026:
+    Container ID:   containerd://a575a19a665c4009f150fbb8cacaea153e259ae0230a433707a336831bf4229b
+    Image:          axelirsutti/vitrine-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/vitrine-mip-04-11-2026@sha256:16ece0bc4910785b656174a944bca69f9d00f02d4ca36f46e84e5b14326b97e5
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:28 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:31 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     200m
+      memory:  64Mi
+    Requests:
+      cpu:      50m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:    dev-mip-04-11-2026 (v1:metadata.namespace)
+      STOCK_URL:  http://stock-mip-04-11-2026:8080
+    Mounts:       <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: vitrine-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container vitrine-mip-04-11-2026
+
+
+Name:             vitrine-mip-04-11-2026-7fdf57dc7-b28fr
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=vitrine-mip-04-11-2026
+                  app.kubernetes.io/component=frontend
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=vitrine
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=irsutti
+                  pod-template-hash=7fdf57dc7
+                  prenom=axel
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.73
+IPs:
+  IP:           10.42.0.73
+Controlled By:  ReplicaSet/vitrine-mip-04-11-2026-7fdf57dc7
+Containers:
+  vitrine-mip-04-11-2026:
+    Container ID:   containerd://60aa35daaf5a9a16126a52073f64395a5c16f029c6eee3ee94bb0dc725c56cec
+    Image:          axelirsutti/vitrine-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/vitrine-mip-04-11-2026@sha256:16ece0bc4910785b656174a944bca69f9d00f02d4ca36f46e84e5b14326b97e5
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:30 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:31 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     200m
+      memory:  64Mi
+    Requests:
+      cpu:      50m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:    dev-mip-04-11-2026 (v1:metadata.namespace)
+      STOCK_URL:  http://stock-mip-04-11-2026:8080
+    Mounts:       <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: vitrine-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container vitrine-mip-04-11-2026
+
+
+Name:             vitrine-mip-04-11-2026-7fdf57dc7-qwjfc
+Namespace:        dev-mip-04-11-2026
+Priority:         0
+Service Account:  default
+Node:             node-mip-04-11-2026/10.0.2.15
+Start Time:       Wed, 04 Nov 2026 10:19:26 +0100
+Labels:           app=vitrine-mip-04-11-2026
+                  app.kubernetes.io/component=frontend
+                  app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/name=vitrine
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=irsutti
+                  pod-template-hash=7fdf57dc7
+                  prenom=axel
+                  projet=e5-5sdwana
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.42.0.72
+IPs:
+  IP:           10.42.0.72
+Controlled By:  ReplicaSet/vitrine-mip-04-11-2026-7fdf57dc7
+Containers:
+  vitrine-mip-04-11-2026:
+    Container ID:   containerd://b388f7fc9a7e4a798ea61cfccd72c1491306849e2c0cc4e0d2c7f3de08bb8077
+    Image:          axelirsutti/vitrine-mip-04-11-2026:1.0.0
+    Image ID:       docker.io/axelirsutti/vitrine-mip-04-11-2026@sha256:16ece0bc4910785b656174a944bca69f9d00f02d4ca36f46e84e5b14326b97e5
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 04 Nov 2026 13:18:30 +0100
+    Last State:     Terminated
+      Reason:       Unknown
+      Exit Code:    255
+      Started:      Wed, 04 Nov 2026 10:19:31 +0100
+      Finished:     Wed, 04 Nov 2026 13:18:08 +0100
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     200m
+      memory:  64Mi
+    Requests:
+      cpu:      50m
+      memory:   16Mi
+    Liveness:   http-get http://:http/healthz delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:http/readyz delay=0s timeout=1s period=5s #success=1 #failure=3
+    Environment Variables from:
+      hosts-mip-04-11-2026-f4t2ff7c9g  ConfigMap  Optional: false
+    Environment:
+      APP_ENV:    dev-mip-04-11-2026 (v1:metadata.namespace)
+      STOCK_URL:  http://stock-mip-04-11-2026:8080
+    Mounts:       <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  16m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          16m   kubelet  Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+  Normal  Created         16m   kubelet  Created container: vitrine-mip-04-11-2026
+  Normal  Started         16m   kubelet  Started container vitrine-mip-04-11-2026
+
+
+Name:                     paiement-mip-04-11-2026
+Namespace:                dev-mip-04-11-2026
+Labels:                   app.kubernetes.io/managed-by=kustomize
+                          app.kubernetes.io/part-of=comptoir-lorrain
+                          empreinte=MIP-04-11-2026
+                          env=dev
+                          groupe=mip
+                          membres=mahaut-irsutti-peiffer
+                          nom=irsutti
+                          prenom=axel
+                          projet=e5-5sdwana
+Annotations:              <none>
+Selector:                 app=paiement-mip-04-11-2026
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.43.22.140
+IPs:                      10.43.22.140
+Port:                     http  8080/TCP
+TargetPort:               http/TCP
+Endpoints:                10.42.0.67:8080,10.42.0.64:8080,10.42.0.89:8080
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     stock-mip-04-11-2026
+Namespace:                dev-mip-04-11-2026
+Labels:                   app.kubernetes.io/managed-by=kustomize
+                          app.kubernetes.io/part-of=comptoir-lorrain
+                          empreinte=MIP-04-11-2026
+                          env=dev
+                          groupe=mip
+                          membres=mahaut-irsutti-peiffer
+                          nom=mahaut
+                          prenom=bryan
+                          projet=e5-5sdwana
+Annotations:              <none>
+Selector:                 app=stock-mip-04-11-2026
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.43.77.170
+IPs:                      10.43.77.170
+Port:                     http  8080/TCP
+TargetPort:               http/TCP
+Endpoints:                10.42.0.65:8080,10.42.0.62:8080,10.42.0.63:8080
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     vitrine-mip-04-11-2026
+Namespace:                dev-mip-04-11-2026
+Labels:                   app.kubernetes.io/managed-by=kustomize
+                          app.kubernetes.io/part-of=comptoir-lorrain
+                          empreinte=MIP-04-11-2026
+                          env=dev
+                          groupe=mip
+                          membres=mahaut-irsutti-peiffer
+                          nom=irsutti
+                          prenom=axel
+                          projet=e5-5sdwana
+Annotations:              <none>
+Selector:                 app=vitrine-mip-04-11-2026
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.43.111.128
+IPs:                      10.43.111.128
+Port:                     http  8080/TCP
+TargetPort:               http/TCP
+Endpoints:                10.42.0.70:8080,10.42.0.73:8080,10.42.0.72:8080
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:             paiement-mip-04-11-2026
+Labels:           app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=mahaut
+                  prenom=bryan
+                  projet=e5-5sdwana
+Namespace:        dev-mip-04-11-2026
+Address:          192.168.1.110
+Ingress Class:    traefik
+Default backend:  <default>
+Rules:
+  Host                                 Path  Backends
+  ----                                 ----  --------
+  paiement.dev.192.168.1.110.sslip.io  
+                                       /   paiement-mip-04-11-2026:http (10.42.0.67:8080,10.42.0.64:8080,10.42.0.89:8080)
+Annotations:                           <none>
+Events:                                <none>
+
+
+Name:             vitrine-mip-04-11-2026
+Labels:           app.kubernetes.io/managed-by=kustomize
+                  app.kubernetes.io/part-of=comptoir-lorrain
+                  empreinte=MIP-04-11-2026
+                  env=dev
+                  groupe=mip
+                  membres=mahaut-irsutti-peiffer
+                  nom=mahaut
+                  prenom=bryan
+                  projet=e5-5sdwana
+Namespace:        dev-mip-04-11-2026
+Address:          192.168.1.110
+Ingress Class:    traefik
+Default backend:  <default>
+Rules:
+  Host                                Path  Backends
+  ----                                ----  --------
+  vitrine.dev.192.168.1.110.sslip.io  
+                                      /   vitrine-mip-04-11-2026:http (10.42.0.70:8080,10.42.0.73:8080,10.42.0.72:8080)
+Annotations:                          <none>
+Events:                               <none>
+
+
+Name:                                                  paiement-mip-04-11-2026
+Namespace:                                             dev-mip-04-11-2026
+Labels:                                                app.kubernetes.io/managed-by=kustomize
+                                                       app.kubernetes.io/part-of=comptoir-lorrain
+                                                       empreinte=MIP-04-11-2026
+                                                       env=dev
+                                                       groupe=mip
+                                                       membres=mahaut-irsutti-peiffer
+                                                       nom=peiffer
+                                                       prenom=axel
+                                                       projet=e5-5sdwana
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 10:19:26 +0100
+Reference:                                             Deployment/paiement-mip-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  4% (1m) / 70%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+      - Type: Pods     Value: 4    Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 50  Period: 30 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+Events:
+  Type     Reason                        Age   From                       Message
+  ----     ------                        ----  ----                       -------
+  Warning  FailedGetResourceMetric       16m   horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Warning  FailedComputeMetricsReplicas  16m   horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+
+
+Name:                                                  stock-mip-04-11-2026
+Namespace:                                             dev-mip-04-11-2026
+Labels:                                                app.kubernetes.io/managed-by=kustomize
+                                                       app.kubernetes.io/part-of=comptoir-lorrain
+                                                       empreinte=MIP-04-11-2026
+                                                       env=dev
+                                                       groupe=mip
+                                                       membres=mahaut-irsutti-peiffer
+                                                       nom=peiffer
+                                                       prenom=axel
+                                                       projet=e5-5sdwana
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 10:19:26 +0100
+Reference:                                             Deployment/stock-mip-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  4% (1m) / 70%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+      - Type: Pods     Value: 4    Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 50  Period: 30 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+Events:
+  Type     Reason                        Age   From                       Message
+  ----     ------                        ----  ----                       -------
+  Warning  FailedGetResourceMetric       16m   horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Warning  FailedComputeMetricsReplicas  16m   horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+
+
+Name:                                                  vitrine-mip-04-11-2026
+Namespace:                                             dev-mip-04-11-2026
+Labels:                                                app.kubernetes.io/managed-by=kustomize
+                                                       app.kubernetes.io/part-of=comptoir-lorrain
+                                                       empreinte=MIP-04-11-2026
+                                                       env=dev
+                                                       groupe=mip
+                                                       membres=mahaut-irsutti-peiffer
+                                                       nom=peiffer
+                                                       prenom=axel
+                                                       projet=e5-5sdwana
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 04 Nov 2026 10:19:26 +0100
+Reference:                                             Deployment/vitrine-mip-04-11-2026
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  2% (1m) / 70%
+Min replicas:                                          3
+Max replicas:                                          20
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+      - Type: Pods     Value: 4    Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 50  Period: 30 seconds
+Deployment pods:       3 current / 3 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+Events:
+  Type     Reason                        Age   From                       Message
+  ----     ------                        ----  ----                       -------
+  Warning  FailedGetResourceMetric       16m   horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Warning  FailedComputeMetricsReplicas  16m   horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+
+
+Name:         allow-loadtest-mip-04-11-2026
+Namespace:    dev-mip-04-11-2026
+Created on:   2026-11-04 10:19:26 +0100 CET
+Labels:       app.kubernetes.io/managed-by=kustomize
+              app.kubernetes.io/part-of=comptoir-lorrain
+              empreinte=MIP-04-11-2026
+              env=dev
+              groupe=mip
+              membres=mahaut-irsutti-peiffer
+              nom=mahaut
+              prenom=bryan
+              projet=e5-5sdwana
+Annotations:  <none>
+Spec:
+  PodSelector:     app in (paiement-mip-04-11-2026,stock-mip-04-11-2026,vitrine-mip-04-11-2026)
+  Allowing ingress traffic:
+    To Port: 8080/TCP
+    From:
+      PodSelector: app=loadtest-mip-04-11-2026
+  Not affecting egress traffic
+  Policy Types: Ingress
+
+
+Name:         allow-stock-interne-mip-04-11-2026
+Namespace:    dev-mip-04-11-2026
+Created on:   2026-11-04 10:19:26 +0100 CET
+Labels:       app.kubernetes.io/managed-by=kustomize
+              app.kubernetes.io/part-of=comptoir-lorrain
+              empreinte=MIP-04-11-2026
+              env=dev
+              groupe=mip
+              membres=mahaut-irsutti-peiffer
+              nom=mahaut
+              prenom=bryan
+              projet=e5-5sdwana
+Annotations:  <none>
+Spec:
+  PodSelector:     app=stock-mip-04-11-2026
+  Allowing ingress traffic:
+    To Port: 8080/TCP
+    From:
+      PodSelector: app in (paiement-mip-04-11-2026,vitrine-mip-04-11-2026)
+  Not affecting egress traffic
+  Policy Types: Ingress
+
+
+Name:         allow-traefik-publiques-mip-04-11-2026
+Namespace:    dev-mip-04-11-2026
+Created on:   2026-11-04 10:19:26 +0100 CET
+Labels:       app.kubernetes.io/managed-by=kustomize
+              app.kubernetes.io/part-of=comptoir-lorrain
+              empreinte=MIP-04-11-2026
+              env=dev
+              groupe=mip
+              membres=mahaut-irsutti-peiffer
+              nom=mahaut
+              prenom=bryan
+              projet=e5-5sdwana
+Annotations:  <none>
+Spec:
+  PodSelector:     app in (paiement-mip-04-11-2026,vitrine-mip-04-11-2026)
+  Allowing ingress traffic:
+    To Port: 8080/TCP
+    From:
+      NamespaceSelector: kubernetes.io/metadata.name=kube-system
+      PodSelector: app.kubernetes.io/name=traefik
+  Not affecting egress traffic
+  Policy Types: Ingress
+
+
+Name:         deny-all-ingress-mip-04-11-2026
+Namespace:    dev-mip-04-11-2026
+Created on:   2026-11-04 10:19:26 +0100 CET
+Labels:       app.kubernetes.io/managed-by=kustomize
+              app.kubernetes.io/part-of=comptoir-lorrain
+              empreinte=MIP-04-11-2026
+              env=dev
+              groupe=mip
+              membres=mahaut-irsutti-peiffer
+              nom=mahaut
+              prenom=bryan
+              projet=e5-5sdwana
+Annotations:  <none>
+Spec:
+  PodSelector:     <none> (Allowing the specific traffic to all pods in this namespace)
+  Allowing ingress traffic:
+    <none> (Selected pods are isolated for ingress connectivity)
+  Not affecting egress traffic
+  Policy Types: Ingress
+
+
+Name:                   quota-mip-04-11-2026
+Namespace:              dev-mip-04-11-2026
+Resource                Used   Hard
+--------                ----   ----
+limits.cpu              1350m  12
+limits.memory           528Mi  5Gi
+pods                    9      70
+requests.cpu            300m   3
+requests.memory         144Mi  1536Mi
+services.loadbalancers  0      0
+services.nodeports      0      0
+
+
+Name:       limites-defaut-mip-04-11-2026
+Namespace:  dev-mip-04-11-2026
+Type        Resource  Min  Max  Default Request  Default Limit  Max Limit/Request Ratio
+----        --------  ---  ---  ---------------  -------------  -----------------------
+Container   cpu       -    2    25m              100m           -
+Container   memory    -    1Gi  16Mi             64Mi           -

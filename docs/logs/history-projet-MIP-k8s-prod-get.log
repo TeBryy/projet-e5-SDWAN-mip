@@ -1,0 +1,58 @@
+NAME                                           READY   STATUS      RESTARTS      AGE     IP            NODE                  NOMINATED NODE   READINESS GATES
+pod/loadtest-mip-04-11-2026-84h9r              0/1     Completed   0             11m     10.42.0.101   node-mip-04-11-2026   <none>           <none>
+pod/paiement-mip-04-11-2026-6658fc9fc9-5qmk5   1/1     Running     1 (17m ago)   3h10m   10.42.0.92    node-mip-04-11-2026   <none>           <none>
+pod/paiement-mip-04-11-2026-6658fc9fc9-ms64f   1/1     Running     1 (17m ago)   3h10m   10.42.0.60    node-mip-04-11-2026   <none>           <none>
+pod/paiement-mip-04-11-2026-6658fc9fc9-z5x7x   1/1     Running     1 (17m ago)   3h10m   10.42.0.85    node-mip-04-11-2026   <none>           <none>
+pod/stock-mip-04-11-2026-679c744b75-hnxpr      1/1     Running     1 (17m ago)   3h10m   10.42.0.93    node-mip-04-11-2026   <none>           <none>
+pod/stock-mip-04-11-2026-679c744b75-njwkw      1/1     Running     0             10m     10.42.0.110   node-mip-04-11-2026   <none>           <none>
+pod/stock-mip-04-11-2026-679c744b75-x65tg      1/1     Running     0             10m     10.42.0.113   node-mip-04-11-2026   <none>           <none>
+pod/vitrine-mip-04-11-2026-64b6684979-2rbk5    1/1     Running     1 (17m ago)   3h10m   10.42.0.94    node-mip-04-11-2026   <none>           <none>
+pod/vitrine-mip-04-11-2026-64b6684979-knrwl    1/1     Running     0             10m     10.42.0.109   node-mip-04-11-2026   <none>           <none>
+pod/vitrine-mip-04-11-2026-64b6684979-t96f5    1/1     Running     1 (17m ago)   3h10m   10.42.0.61    node-mip-04-11-2026   <none>           <none>
+
+NAME                              TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE     SELECTOR
+service/paiement-mip-04-11-2026   ClusterIP   10.43.8.211    <none>        8080/TCP   3h10m   app=paiement-mip-04-11-2026
+service/stock-mip-04-11-2026      ClusterIP   10.43.42.186   <none>        8080/TCP   3h10m   app=stock-mip-04-11-2026
+service/vitrine-mip-04-11-2026    ClusterIP   10.43.78.243   <none>        8080/TCP   3h10m   app=vitrine-mip-04-11-2026
+
+NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS                IMAGES                                      SELECTOR
+deployment.apps/paiement-mip-04-11-2026   3/3     3            3           3h10m   paiement-mip-04-11-2026   axelirsutti/paiement-mip-04-11-2026:1.0.0   app=paiement-mip-04-11-2026
+deployment.apps/stock-mip-04-11-2026      3/3     3            3           3h10m   stock-mip-04-11-2026      axelirsutti/stock-mip-04-11-2026:1.0.0      app=stock-mip-04-11-2026
+deployment.apps/vitrine-mip-04-11-2026    3/3     3            3           3h10m   vitrine-mip-04-11-2026    axelirsutti/vitrine-mip-04-11-2026:1.0.0    app=vitrine-mip-04-11-2026
+
+NAME                                                 DESIRED   CURRENT   READY   AGE     CONTAINERS                IMAGES                                      SELECTOR
+replicaset.apps/paiement-mip-04-11-2026-6658fc9fc9   3         3         3       3h10m   paiement-mip-04-11-2026   axelirsutti/paiement-mip-04-11-2026:1.0.0   app=paiement-mip-04-11-2026,pod-template-hash=6658fc9fc9
+replicaset.apps/stock-mip-04-11-2026-679c744b75      3         3         3       3h10m   stock-mip-04-11-2026      axelirsutti/stock-mip-04-11-2026:1.0.0      app=stock-mip-04-11-2026,pod-template-hash=679c744b75
+replicaset.apps/vitrine-mip-04-11-2026-64b6684979    3         3         3       3h10m   vitrine-mip-04-11-2026    axelirsutti/vitrine-mip-04-11-2026:1.0.0    app=vitrine-mip-04-11-2026,pod-template-hash=64b6684979
+
+NAME                                                          REFERENCE                            TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/paiement-mip-04-11-2026   Deployment/paiement-mip-04-11-2026   cpu: 4%/70%   3         20        3          3h10m
+horizontalpodautoscaler.autoscaling/stock-mip-04-11-2026      Deployment/stock-mip-04-11-2026      cpu: 4%/70%   3         20        3          3h10m
+horizontalpodautoscaler.autoscaling/vitrine-mip-04-11-2026    Deployment/vitrine-mip-04-11-2026    cpu: 2%/70%   3         20        3          3h10m
+
+NAME                                STATUS     COMPLETIONS   DURATION   AGE   CONTAINERS          IMAGES              SELECTOR
+job.batch/loadtest-mip-04-11-2026   Complete   1/1           5m10s      11m   k6-mip-04-11-2026   grafana/k6:0.54.0   batch.kubernetes.io/controller-uid=9ea0e8f6-bf08-41ca-b53b-9f0b00262e3f
+
+NAME                                                CLASS     HOSTS                                  ADDRESS         PORTS   AGE
+ingress.networking.k8s.io/paiement-mip-04-11-2026   traefik   paiement.prod.192.168.1.110.sslip.io   192.168.1.110   80      3h10m
+ingress.networking.k8s.io/vitrine-mip-04-11-2026    traefik   vitrine.prod.192.168.1.110.sslip.io    192.168.1.110   80      3h10m
+
+NAME                                                                     POD-SELECTOR                                                                   AGE
+networkpolicy.networking.k8s.io/allow-loadtest-mip-04-11-2026            app in (paiement-mip-04-11-2026,stock-mip-04-11-2026,vitrine-mip-04-11-2026)   3h10m
+networkpolicy.networking.k8s.io/allow-stock-interne-mip-04-11-2026       app=stock-mip-04-11-2026                                                       3h10m
+networkpolicy.networking.k8s.io/allow-traefik-publiques-mip-04-11-2026   app in (paiement-mip-04-11-2026,vitrine-mip-04-11-2026)                        3h10m
+networkpolicy.networking.k8s.io/deny-all-ingress-mip-04-11-2026          <none>                                                                         3h10m
+
+NAME                                 REQUEST                                                                                                                 LIMIT                                            AGE
+resourcequota/quota-mip-04-11-2026   pods: 9/70, requests.cpu: 300m/3, requests.memory: 144Mi/1536Mi, services.loadbalancers: 0/0, services.nodeports: 0/0   limits.cpu: 1350m/12, limits.memory: 528Mi/5Gi   3h10m
+
+NAME                                       CREATED AT
+limitrange/limites-defaut-mip-04-11-2026   2026-11-04T09:24:57Z
+
+NAME                                                  DATA   AGE
+configmap/hosts-mip-04-11-2026-77h9hchdb2             2      3h10m
+configmap/kube-root-ca.crt                            1      3h10m
+configmap/loadtest-script-mip-04-11-2026-h464g2gk42   1      11m
+
+NAME                           TYPE     DATA   AGE
+secret/stripe-mip-04-11-2026   Opaque   1      3h10m

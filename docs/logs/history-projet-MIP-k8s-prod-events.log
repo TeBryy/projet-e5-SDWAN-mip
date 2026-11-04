@@ -1,0 +1,465 @@
+LAST SEEN               TYPE      REASON                         OBJECT                                            MESSAGE
+16m                     Normal    SandboxChanged                 Pod/paiement-mip-04-11-2026-6658fc9fc9-ms64f      Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    SandboxChanged                 Pod/stock-mip-04-11-2026-679c744b75-szbr9         Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    SandboxChanged                 Pod/vitrine-mip-04-11-2026-64b6684979-t96f5       Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-t96f5       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-ms64f      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-szbr9         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    SandboxChanged                 Pod/stock-mip-04-11-2026-679c744b75-hnxpr         Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    SandboxChanged                 Pod/paiement-mip-04-11-2026-6658fc9fc9-z5x7x      Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    SandboxChanged                 Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    SandboxChanged                 Pod/vitrine-mip-04-11-2026-64b6684979-2rbk5       Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-ms64f      Created container: paiement-mip-04-11-2026
+16m                     Normal    SandboxChanged                 Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    SandboxChanged                 Pod/paiement-mip-04-11-2026-6658fc9fc9-5qmk5      Pod sandbox changed, it will be killed and re-created.
+16m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-t96f5       Started container vitrine-mip-04-11-2026
+16m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-t96f5       Created container: vitrine-mip-04-11-2026
+16m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-szbr9         Created container: stock-mip-04-11-2026
+16m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-ms64f      Started container paiement-mip-04-11-2026
+16m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-szbr9         Started container stock-mip-04-11-2026
+16m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-5qmk5      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-z5x7x      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-hnxpr         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-2rbk5       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-z5x7x      Created container: paiement-mip-04-11-2026
+16m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+16m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-5qmk5      Created container: paiement-mip-04-11-2026
+16m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Created container: stock-mip-04-11-2026
+16m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-2rbk5       Started container vitrine-mip-04-11-2026
+16m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-2rbk5       Created container: vitrine-mip-04-11-2026
+16m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-z5x7x      Started container paiement-mip-04-11-2026
+16m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Created container: vitrine-mip-04-11-2026
+16m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Started container vitrine-mip-04-11-2026
+16m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-5qmk5      Started container paiement-mip-04-11-2026
+16m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-hnxpr         Created container: stock-mip-04-11-2026
+16m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-hnxpr         Started container stock-mip-04-11-2026
+16m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Started container stock-mip-04-11-2026
+16m                     Warning   FailedComputeMetricsReplicas   HorizontalPodAutoscaler/paiement-mip-04-11-2026   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m                     Warning   FailedComputeMetricsReplicas   HorizontalPodAutoscaler/vitrine-mip-04-11-2026    invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m                     Warning   FailedGetResourceMetric        HorizontalPodAutoscaler/stock-mip-04-11-2026      failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m                     Warning   FailedComputeMetricsReplicas   HorizontalPodAutoscaler/stock-mip-04-11-2026      invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m                     Warning   FailedGetResourceMetric        HorizontalPodAutoscaler/paiement-mip-04-11-2026   failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+16m                     Warning   FailedGetResourceMetric        HorizontalPodAutoscaler/vitrine-mip-04-11-2026    failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+11m                     Normal    SuccessfulCreate               Job/loadtest-mip-04-11-2026                       Created pod: loadtest-mip-04-11-2026-84h9r
+11m                     Normal    Scheduled                      Pod/loadtest-mip-04-11-2026-84h9r                 Successfully assigned prod-mip-04-11-2026/loadtest-mip-04-11-2026-84h9r to node-mip-04-11-2026
+11m                     Normal    Pulling                        Pod/loadtest-mip-04-11-2026-84h9r                 Pulling image "grafana/k6:0.54.0"
+11m                     Normal    Pulled                         Pod/loadtest-mip-04-11-2026-84h9r                 Successfully pulled image "grafana/k6:0.54.0" in 5.467s (5.467s including waiting). Image size: 33850759 bytes.
+11m                     Normal    Started                        Pod/loadtest-mip-04-11-2026-84h9r                 Started container k6-mip-04-11-2026
+11m                     Normal    Created                        Pod/loadtest-mip-04-11-2026-84h9r                 Created container: k6-mip-04-11-2026
+10m                     Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled up replica set stock-mip-04-11-2026-679c744b75 from 3 to 6
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 4; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-c2rfv
+10m                     Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled up replica set vitrine-mip-04-11-2026-64b6684979 from 3 to 4
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-8vnbs
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-ljsj5
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 6; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-ck7hk
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-8vnbs to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-c2rfv to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-ljsj5         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-ljsj5 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-ck7hk to node-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Created container: vitrine-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Created container: stock-mip-04-11-2026
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Created container: stock-mip-04-11-2026
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Started container stock-mip-04-11-2026
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Started container stock-mip-04-11-2026
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-ljsj5         Started container stock-mip-04-11-2026
+10m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Started container vitrine-mip-04-11-2026
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-ljsj5         Created container: stock-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-ljsj5         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled up replica set paiement-mip-04-11-2026-6658fc9fc9 from 3 to 5
+10m                     Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-vqcn9
+10m                     Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-qn256
+10m                     Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled up replica set vitrine-mip-04-11-2026-64b6684979 from 4 to 6
+10m                     Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled up replica set stock-mip-04-11-2026-679c744b75 from 6 to 9
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-cbz68
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 9; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-knrwl
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 6; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 5; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-qn256      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-qn256 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-vqcn9      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-vqcn9 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-cbz68         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-cbz68 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-knrwl       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-knrwl to node-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-vqcn9      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-qn256      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-hns2f
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-lxx7g
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-njwkw
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-njwkw         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-njwkw to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-lxx7g         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-lxx7g to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-hns2f       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-hns2f to node-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-njwkw         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-cbz68         Created container: stock-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-hns2f       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-cbz68         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-qn256      Started container paiement-mip-04-11-2026
+10m                     Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-qn256      Readiness probe failed: Get "http://10.42.0.106:8080/readyz": dial tcp 10.42.0.106:8080: connect: connection refused
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-cbz68         Started container stock-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-knrwl       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-knrwl       Created container: vitrine-mip-04-11-2026
+10m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-knrwl       Started container vitrine-mip-04-11-2026
+10m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-vqcn9      Created container: paiement-mip-04-11-2026
+10m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-qn256      Created container: paiement-mip-04-11-2026
+10m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-vqcn9      Started container paiement-mip-04-11-2026
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-njwkw         Created container: stock-mip-04-11-2026
+10m                     Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-vqcn9      Readiness probe failed: Get "http://10.42.0.107:8080/readyz": dial tcp 10.42.0.107:8080: connect: connection refused
+10m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-hns2f       Started container vitrine-mip-04-11-2026
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-njwkw         Started container stock-mip-04-11-2026
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-lxx7g         Started container stock-mip-04-11-2026
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-lxx7g         Created container: stock-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-lxx7g         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-hns2f       Created container: vitrine-mip-04-11-2026
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 14; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 12; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 8; reason: cpu resource utilization (percentage of request) above target
+10m                     Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled up replica set paiement-mip-04-11-2026-6658fc9fc9 from 5 to 8
+10m                     Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled up replica set vitrine-mip-04-11-2026-64b6684979 from 6 to 12
+10m                     Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled up replica set stock-mip-04-11-2026-679c744b75 from 9 to 14
+10m                     Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-qvtld
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-x65tg
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-x65tg         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-x65tg to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-qvtld      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-qvtld to node-mip-04-11-2026
+10m                     Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-8mkp2
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-2ptf7
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-frjf9
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-rfcvj
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-vxqgs
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-7sblb
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-xfw8v
+10m                     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        Created pod: stock-mip-04-11-2026-679c744b75-dwdz8
+10m                     Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-fmcg2
+10m                     Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Created pod: vitrine-mip-04-11-2026-64b6684979-mdm9f
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-frjf9       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-frjf9 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-fmcg2      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-fmcg2 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-7sblb         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-7sblb to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-mdm9f       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-mdm9f to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-8mkp2 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-dwdz8         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-dwdz8 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-2ptf7 to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-rfcvj to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-vxqgs       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-vxqgs to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-xfw8v       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-xfw8v to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-5bmbl         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-5bmbl to node-mip-04-11-2026
+10m                     Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-sq9z5         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-sq9z5 to node-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-x65tg         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-frjf9       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-x65tg         Created container: stock-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-qvtld      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-qvtld      Created container: paiement-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-fmcg2      Created container: paiement-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-fmcg2      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-qvtld      Started container paiement-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-7sblb         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-frjf9       Created container: vitrine-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-mdm9f       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-x65tg         Started container stock-mip-04-11-2026
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-7sblb         Created container: stock-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-5bmbl         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Created container: vitrine-mip-04-11-2026
+10m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-mdm9f       Started container vitrine-mip-04-11-2026
+10m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-mdm9f       Created container: vitrine-mip-04-11-2026
+10m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-fmcg2      Started container paiement-mip-04-11-2026
+10m                     Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Started container paiement-mip-04-11-2026
+10m                     Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-7sblb         Started container stock-mip-04-11-2026
+10m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-frjf9       Started container vitrine-mip-04-11-2026
+10m                     Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Started container vitrine-mip-04-11-2026
+10m                     Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Created container: vitrine-mip-04-11-2026
+10m                     Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Created container: paiement-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-dwdz8         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+10m                     Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-dwdz8         Created container: stock-mip-04-11-2026
+10m                     Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m59s                   Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-xfw8v       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m59s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Started container vitrine-mip-04-11-2026
+9m59s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-5bmbl         Started container stock-mip-04-11-2026
+9m59s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-5bmbl         Created container: stock-mip-04-11-2026
+9m59s                   Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-vxqgs       Created container: vitrine-mip-04-11-2026
+9m59s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-xfw8v       Started container vitrine-mip-04-11-2026
+9m59s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-vxqgs       Started container vitrine-mip-04-11-2026
+9m59s                   Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-vxqgs       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m59s                   Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-xfw8v       Created container: vitrine-mip-04-11-2026
+9m59s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-dwdz8         Started container stock-mip-04-11-2026
+9m59s                   Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-sq9z5         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+9m59s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-sq9z5         Created container: stock-mip-04-11-2026
+9m59s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-sq9z5         Started container stock-mip-04-11-2026
+9m52s (x2 over 10m)     Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Liveness probe failed: Get "http://10.42.0.99:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m51s (x4 over 10m)     Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Readiness probe failed: Get "http://10.42.0.99:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m49s                   Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled up replica set stock-mip-04-11-2026-679c744b75 from 14 to 18
+9m49s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 18; reason: cpu resource utilization (percentage of request) above target
+9m48s                   Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-jrbnj         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-jrbnj to node-mip-04-11-2026
+9m48s                   Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-xrxwq to node-mip-04-11-2026
+9m48s                   Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-68cg6         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-68cg6 to node-mip-04-11-2026
+9m48s                   Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-ltl28         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-ltl28 to node-mip-04-11-2026
+9m48s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Created container: stock-mip-04-11-2026
+9m48s                   Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+9m48s                   Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-jrbnj         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+9m48s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-68cg6         Created container: stock-mip-04-11-2026
+9m48s                   Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-68cg6         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+9m48s                   Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-ltl28         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+9m47s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-68cg6         Started container stock-mip-04-11-2026
+9m47s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Started container stock-mip-04-11-2026
+9m47s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-jrbnj         Started container stock-mip-04-11-2026
+9m47s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-jrbnj         Created container: stock-mip-04-11-2026
+9m47s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-ltl28         Created container: stock-mip-04-11-2026
+9m47s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-ltl28         Started container stock-mip-04-11-2026
+9m40s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-vxqgs       Liveness probe failed: Get "http://10.42.0.126:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m34s                   Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled up replica set paiement-mip-04-11-2026-6658fc9fc9 from 8 to 10
+9m34s                   Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-4p6gw
+9m34s                   Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled up replica set vitrine-mip-04-11-2026-64b6684979 from 12 to 16
+9m34s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 20; reason: cpu resource utilization (percentage of request) above target
+9m34s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 16; reason: cpu resource utilization (percentage of request) above target
+9m34s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 10; reason: cpu resource utilization (percentage of request) above target
+9m34s                   Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled up replica set stock-mip-04-11-2026-679c744b75 from 18 to 20
+9m34s                   Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-tb22s
+9m33s                   Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-tb22s      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-tb22s to node-mip-04-11-2026
+9m33s                   Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-4p6gw      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-4p6gw to node-mip-04-11-2026
+9m33s                   Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-kwfrh         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-kwfrh to node-mip-04-11-2026
+9m33s (x8 over 10m)     Normal    SuccessfulCreate               ReplicaSet/stock-mip-04-11-2026-679c744b75        (combined from similar events): Created pod: stock-mip-04-11-2026-679c744b75-kt89r
+9m33s                   Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-tz94t       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-tz94t to node-mip-04-11-2026
+9m33s                   Normal    Scheduled                      Pod/stock-mip-04-11-2026-679c744b75-kt89r         Successfully assigned prod-mip-04-11-2026/stock-mip-04-11-2026-679c744b75-kt89r to node-mip-04-11-2026
+9m32s                   Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-6rx47       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-6rx47 to node-mip-04-11-2026
+9m32s                   Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-gjj7b       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-gjj7b to node-mip-04-11-2026
+9m32s                   Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-59hs5       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-59hs5 to node-mip-04-11-2026
+9m32s                   Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-kwfrh         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+9m32s                   Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-tb22s      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+9m32s                   Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-tz94t       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m32s                   Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-4p6gw      Created container: paiement-mip-04-11-2026
+9m32s                   Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-4p6gw      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+9m32s                   Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-tz94t       Created container: vitrine-mip-04-11-2026
+9m32s                   Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-tb22s      Created container: paiement-mip-04-11-2026
+9m31s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-kwfrh         Created container: stock-mip-04-11-2026
+9m31s                   Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-4p6gw      Started container paiement-mip-04-11-2026
+9m31s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-kwfrh         Started container stock-mip-04-11-2026
+9m31s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-tz94t       Started container vitrine-mip-04-11-2026
+9m31s                   Normal    Pulled                         Pod/stock-mip-04-11-2026-679c744b75-kt89r         Container image "axelirsutti/stock-mip-04-11-2026:1.0.0" already present on machine
+9m31s                   Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-tb22s      Started container paiement-mip-04-11-2026
+9m31s                   Normal    Created                        Pod/stock-mip-04-11-2026-679c744b75-kt89r         Created container: stock-mip-04-11-2026
+9m30s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-59hs5       Started container vitrine-mip-04-11-2026
+9m30s                   Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-6rx47       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m30s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-gjj7b       Started container vitrine-mip-04-11-2026
+9m30s                   Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-gjj7b       Created container: vitrine-mip-04-11-2026
+9m30s                   Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-59hs5       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m30s                   Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-6rx47       Created container: vitrine-mip-04-11-2026
+9m30s                   Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-59hs5       Created container: vitrine-mip-04-11-2026
+9m30s                   Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-gjj7b       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m30s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-6rx47       Started container vitrine-mip-04-11-2026
+9m30s                   Normal    Started                        Pod/stock-mip-04-11-2026-679c744b75-kt89r         Started container stock-mip-04-11-2026
+9m17s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Readiness probe failed: Get "http://10.42.0.102:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m13s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Liveness probe failed: Get "http://10.42.0.102:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m12s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-tz94t       Liveness probe failed: Get "http://10.42.0.134:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m9s                    Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-tz94t       Readiness probe failed: Get "http://10.42.0.134:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m4s                    Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 19; reason: cpu resource utilization (percentage of request) above target
+9m4s                    Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled up replica set vitrine-mip-04-11-2026-64b6684979 from 16 to 19
+9m3s                    Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-mvx8v       Created container: vitrine-mip-04-11-2026
+9m3s                    Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-mvx8v       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m3s (x2 over 9m8s)     Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Readiness probe failed: Get "http://10.42.0.120:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m3s                    Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-ntz65       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m3s                    Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-ntz65       Created container: vitrine-mip-04-11-2026
+9m3s                    Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-mvx8v       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-mvx8v to node-mip-04-11-2026
+9m3s                    Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-dwh9g       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-dwh9g to node-mip-04-11-2026
+9m3s                    Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-ntz65       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-ntz65 to node-mip-04-11-2026
+9m2s                    Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-mvx8v       Started container vitrine-mip-04-11-2026
+9m2s                    Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-dwh9g       Created container: vitrine-mip-04-11-2026
+9m2s                    Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-dwh9g       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+9m2s                    Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-ntz65       Started container vitrine-mip-04-11-2026
+9m2s                    Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-dwh9g       Started container vitrine-mip-04-11-2026
+9m1s                    Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Liveness probe failed: Get "http://10.42.0.120:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+8m58s                   Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Readiness probe failed: Get "http://10.42.0.119:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+8m49s                   Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-kdclg
+8m49s                   Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Created pod: paiement-mip-04-11-2026-6658fc9fc9-fwzrh
+8m49s                   Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled up replica set paiement-mip-04-11-2026-6658fc9fc9 from 10 to 15
+8m49s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 15; reason: cpu resource utilization (percentage of request) above target
+8m48s                   Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-kdclg      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-kdclg to node-mip-04-11-2026
+8m48s                   Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-fwzrh      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-fwzrh to node-mip-04-11-2026
+8m48s                   Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-mfglm      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-mfglm to node-mip-04-11-2026
+8m48s (x3 over 8m49s)   Normal    SuccessfulCreate               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     (combined from similar events): Created pod: paiement-mip-04-11-2026-6658fc9fc9-kj52j
+8m48s                   Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-kdclg      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+8m48s (x8 over 9m33s)   Normal    SuccessfulCreate               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      (combined from similar events): Created pod: vitrine-mip-04-11-2026-64b6684979-5zc5p
+8m48s                   Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled up replica set vitrine-mip-04-11-2026-64b6684979 from 19 to 20
+8m48s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 20; reason: cpu resource utilization (percentage of request) above target
+8m48s                   Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-ph4lf      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-ph4lf to node-mip-04-11-2026
+8m48s                   Normal    Scheduled                      Pod/paiement-mip-04-11-2026-6658fc9fc9-kj52j      Successfully assigned prod-mip-04-11-2026/paiement-mip-04-11-2026-6658fc9fc9-kj52j to node-mip-04-11-2026
+8m47s                   Normal    Scheduled                      Pod/vitrine-mip-04-11-2026-64b6684979-5zc5p       Successfully assigned prod-mip-04-11-2026/vitrine-mip-04-11-2026-64b6684979-5zc5p to node-mip-04-11-2026
+8m47s                   Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-kdclg      Started container paiement-mip-04-11-2026
+8m47s                   Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-mfglm      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+8m47s                   Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-kdclg      Created container: paiement-mip-04-11-2026
+8m47s                   Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-mfglm      Created container: paiement-mip-04-11-2026
+8m47s                   Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-fwzrh      Created container: paiement-mip-04-11-2026
+8m47s                   Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-fwzrh      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+8m46s                   Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-kj52j      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+8m46s                   Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-ph4lf      Created container: paiement-mip-04-11-2026
+8m46s                   Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-mfglm      Started container paiement-mip-04-11-2026
+8m46s                   Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-fwzrh      Started container paiement-mip-04-11-2026
+8m46s                   Normal    Pulled                         Pod/vitrine-mip-04-11-2026-64b6684979-5zc5p       Container image "axelirsutti/vitrine-mip-04-11-2026:1.0.0" already present on machine
+8m46s                   Normal    Pulled                         Pod/paiement-mip-04-11-2026-6658fc9fc9-ph4lf      Container image "axelirsutti/paiement-mip-04-11-2026:1.0.0" already present on machine
+8m46s                   Normal    Started                        Pod/vitrine-mip-04-11-2026-64b6684979-5zc5p       Started container vitrine-mip-04-11-2026
+8m46s                   Normal    Created                        Pod/vitrine-mip-04-11-2026-64b6684979-5zc5p       Created container: vitrine-mip-04-11-2026
+8m46s                   Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-ph4lf      Started container paiement-mip-04-11-2026
+8m46s                   Normal    Created                        Pod/paiement-mip-04-11-2026-6658fc9fc9-kj52j      Created container: paiement-mip-04-11-2026
+8m46s                   Normal    Started                        Pod/paiement-mip-04-11-2026-6658fc9fc9-kj52j      Started container paiement-mip-04-11-2026
+8m32s                   Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-ms64f      Readiness probe failed: Get "http://10.42.0.60:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+8m18s (x2 over 9m27s)   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-knrwl       Liveness probe failed: Get "http://10.42.0.109:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+8m16s (x3 over 9m32s)   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-knrwl       Readiness probe failed: Get "http://10.42.0.109:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+8m1s                    Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-fmcg2      Liveness probe failed: Get "http://10.42.0.116:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+8m                      Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Liveness probe failed: Get "http://10.42.0.123:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m57s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Readiness probe failed: Get "http://10.42.0.123:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m57s (x2 over 8m7s)    Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Liveness probe failed: Get "http://10.42.0.127:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m56s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-hnxpr         Readiness probe failed: Get "http://10.42.0.93:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m54s (x5 over 8m11s)   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Readiness probe failed: Get "http://10.42.0.127:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m54s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Liveness probe failed: Get "http://10.42.0.103:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m51s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-mdm9f       Liveness probe failed: Get "http://10.42.0.118:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m51s (x2 over 7m57s)   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Readiness probe failed: Get "http://10.42.0.103:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m34s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-szbr9         Liveness probe failed: Get "http://10.42.0.58:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m33s (x3 over 7m43s)   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-szbr9         Readiness probe failed: Get "http://10.42.0.58:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m19s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-t96f5       Liveness probe failed: Get "http://10.42.0.61:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m18s (x2 over 8m57s)   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-t96f5       Readiness probe failed: Get "http://10.42.0.61:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m16s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-ltl28         Liveness probe failed: Get "http://10.42.0.130:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m15s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-ltl28         Readiness probe failed: Get "http://10.42.0.130:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m11s (x2 over 9m1s)    Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Liveness probe failed: Get "http://10.42.0.119:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+7m1s                    Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled down replica set paiement-mip-04-11-2026-6658fc9fc9 from 15 to 13
+7m1s                    Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-kdclg      Stopping container paiement-mip-04-11-2026
+7m1s                    Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 13; reason: All metrics below target
+7m1s                    Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-kdclg      Readiness probe failed: HTTP probe failed with statuscode: 503
+7m1s                    Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-fwzrh      Readiness probe failed: HTTP probe failed with statuscode: 503
+7m1s                    Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-fwzrh      Stopping container paiement-mip-04-11-2026
+7m1s                    Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-kdclg
+7m1s                    Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-fwzrh
+6m52s (x2 over 9m12s)   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Liveness probe failed: Get "http://10.42.0.96:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+6m47s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-hns2f       Liveness probe failed: Get "http://10.42.0.111:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+6m44s (x2 over 7m4s)    Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-hns2f       Readiness probe failed: Get "http://10.42.0.111:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+6m44s (x12 over 10m)    Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Readiness probe failed: Get "http://10.42.0.96:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+6m43s (x2 over 9m43s)   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Liveness probe failed: Get "http://10.42.0.105:8080/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+6m37s (x3 over 9m47s)   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Readiness probe failed: Get "http://10.42.0.105:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+6m20s                   Normal    Completed                      Job/loadtest-mip-04-11-2026                       Job completed
+6m16s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-kt795
+6m16s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-gjj7b       Stopping container vitrine-mip-04-11-2026
+6m16s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-gjj7b
+6m16s                   Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled down replica set vitrine-mip-04-11-2026-64b6684979 from 20 to 18
+6m16s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 18; reason: All metrics below target
+6m16s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Stopping container vitrine-mip-04-11-2026
+6m12s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-gjj7b       Readiness probe failed: Get "http://10.42.0.137:8080/readyz": dial tcp 10.42.0.137:8080: connect: connection refused
+6m11s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-kt795       Readiness probe failed: Get "http://10.42.0.96:8080/readyz": dial tcp 10.42.0.96:8080: connect: connection refused
+5m46s                   Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-tb22s
+5m46s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 9; reason: All metrics below target
+5m46s                   Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-fmcg2
+5m46s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Stopping container paiement-mip-04-11-2026
+5m46s                   Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled down replica set paiement-mip-04-11-2026-6658fc9fc9 from 13 to 9
+5m46s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-ph4lf      Stopping container paiement-mip-04-11-2026
+5m46s                   Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-ph4lf      Readiness probe failed: HTTP probe failed with statuscode: 503
+5m46s                   Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-ph4lf
+5m46s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-fmcg2      Stopping container paiement-mip-04-11-2026
+5m46s                   Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-8mkp2
+5m46s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-tb22s      Stopping container paiement-mip-04-11-2026
+5m44s                   Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-8mkp2      Readiness probe failed: HTTP probe failed with statuscode: 503
+5m44s                   Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-fmcg2      Readiness probe failed: HTTP probe failed with statuscode: 503
+5m31s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 10; reason: All metrics below target
+5m31s                   Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled down replica set vitrine-mip-04-11-2026-64b6684979 from 18 to 10
+5m30s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-ntz65
+5m30s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-vxqgs
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-5zc5p       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-ntz65       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-xfw8v
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-dwh9g       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-mvx8v
+5m30s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-frjf9       Readiness probe failed: HTTP probe failed with statuscode: 503
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-xfw8v       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-vxqgs       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-mvx8v       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-dwh9g
+5m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-frjf9       Stopping container vitrine-mip-04-11-2026
+5m30s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-5zc5p
+5m30s                   Normal    SuccessfulDelete               ReplicaSet/vitrine-mip-04-11-2026-64b6684979      Deleted pod: vitrine-mip-04-11-2026-64b6684979-frjf9
+5m29s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-rfcvj       Readiness probe failed: HTTP probe failed with statuscode: 503
+5m28s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-xfw8v       Readiness probe failed: HTTP probe failed with statuscode: 503
+5m28s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-vxqgs       Readiness probe failed: HTTP probe failed with statuscode: 503
+5m27s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-ntz65       Readiness probe failed: Get "http://10.42.0.140:8080/readyz": dial tcp 10.42.0.140:8080: connect: connection refused
+5m27s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-mvx8v       Readiness probe failed: Get "http://10.42.0.139:8080/readyz": dial tcp 10.42.0.139:8080: connect: connection refused
+5m25s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-dwh9g       Readiness probe failed: Get "http://10.42.0.141:8080/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+5m16s                   Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-4p6gw
+5m16s                   Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-mfglm
+5m16s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 6; reason: All metrics below target
+5m16s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-mfglm      Stopping container paiement-mip-04-11-2026
+5m16s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-4p6gw      Stopping container paiement-mip-04-11-2026
+5m16s                   Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-kj52j
+5m16s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-kj52j      Stopping container paiement-mip-04-11-2026
+5m16s                   Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled down replica set paiement-mip-04-11-2026-6658fc9fc9 from 9 to 6
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-jrbnj
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-kwfrh
+5m15s                   Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 Scaled down replica set vitrine-mip-04-11-2026-64b6684979 from 10 to 9
+5m15s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    New size: 9; reason: All metrics below target
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-68cg6         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-cbz68         Stopping container stock-mip-04-11-2026
+5m15s                   Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-mfglm      Readiness probe failed: HTTP probe failed with statuscode: 503
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-jrbnj         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-szbr9         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-59hs5       Stopping container vitrine-mip-04-11-2026
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-kt89r         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-kwfrh         Stopping container stock-mip-04-11-2026
+5m15s                   Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-kj52j      Readiness probe failed: HTTP probe failed with statuscode: 503
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-ltl28         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-sq9z5         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled down replica set stock-mip-04-11-2026-679c744b75 from 20 to 10
+5m15s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 10; reason: All metrics below target
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-ltl28
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-cbz68
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-kt89r
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-xcqk7
+5m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Stopping container stock-mip-04-11-2026
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-sq9z5
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-xrxwq
+5m15s                   Normal    SuccessfulDelete               ReplicaSet/stock-mip-04-11-2026-679c744b75        Deleted pod: stock-mip-04-11-2026-679c744b75-szbr9
+5m14s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-xrxwq         Readiness probe failed: HTTP probe failed with statuscode: 503
+5m13s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-sq9z5         Readiness probe failed: HTTP probe failed with statuscode: 503
+5m13s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-kt89r         Readiness probe failed: HTTP probe failed with statuscode: 503
+5m13s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-59hs5       Readiness probe failed: HTTP probe failed with statuscode: 503
+5m12s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-ltl28         Readiness probe failed: Get "http://10.42.0.130:8080/readyz": dial tcp 10.42.0.130:8080: connect: connection refused
+5m12s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-68cg6         Readiness probe failed: Get "http://10.42.0.129:8080/readyz": dial tcp 10.42.0.129:8080: connect: connection refused
+5m12s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-xcqk7         Readiness probe failed: Get "http://10.42.0.99:8080/readyz": dial tcp 10.42.0.99:8080: connect: connection refused
+5m12s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-jrbnj         Readiness probe failed: Get "http://10.42.0.128:8080/readyz": dial tcp 10.42.0.128:8080: connect: connection refused
+5m12s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-szbr9         Readiness probe failed: Get "http://10.42.0.58:8080/readyz": dial tcp 10.42.0.58:8080: connect: connection refused
+5m1s                    Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled down replica set paiement-mip-04-11-2026-6658fc9fc9 from 6 to 4
+5m1s                    Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-qvtld      Stopping container paiement-mip-04-11-2026
+5m1s                    Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-qn256      Stopping container paiement-mip-04-11-2026
+5m1s                    Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 4; reason: All metrics below target
+5m                      Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-hns2f       Stopping container vitrine-mip-04-11-2026
+5m                      Warning   Unhealthy                      Pod/paiement-mip-04-11-2026-6658fc9fc9-qvtld      Readiness probe failed: HTTP probe failed with statuscode: 503
+5m                      Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-mdm9f       Stopping container vitrine-mip-04-11-2026
+5m                      Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-tz94t       Stopping container vitrine-mip-04-11-2026
+5m                      Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-6rx47       Stopping container vitrine-mip-04-11-2026
+4m59s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-mdm9f       Readiness probe failed: HTTP probe failed with statuscode: 503
+4m58s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-6rx47       Readiness probe failed: HTTP probe failed with statuscode: 503
+4m45s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-dwdz8         Stopping container stock-mip-04-11-2026
+4m45s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-5bmbl         Stopping container stock-mip-04-11-2026
+4m45s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 5; reason: All metrics below target
+4m45s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Stopping container stock-mip-04-11-2026
+4m45s                   Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled down replica set stock-mip-04-11-2026-679c744b75 from 10 to 5
+4m45s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/paiement-mip-04-11-2026   New size: 3; reason: All metrics below target
+4m45s                   Normal    ScalingReplicaSet              Deployment/paiement-mip-04-11-2026                Scaled down replica set paiement-mip-04-11-2026-6658fc9fc9 from 4 to 3
+4m45s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Stopping container stock-mip-04-11-2026
+4m45s (x3 over 5m1s)    Normal    SuccessfulDelete               ReplicaSet/paiement-mip-04-11-2026-6658fc9fc9     (combined from similar events): Deleted pod: paiement-mip-04-11-2026-6658fc9fc9-vqcn9
+4m45s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-7sblb         Stopping container stock-mip-04-11-2026
+4m45s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Stopping container vitrine-mip-04-11-2026
+4m45s                   Normal    Killing                        Pod/paiement-mip-04-11-2026-6658fc9fc9-vqcn9      Stopping container paiement-mip-04-11-2026
+4m44s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-5bmbl         Readiness probe failed: HTTP probe failed with statuscode: 503
+4m44s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-7sblb         Readiness probe failed: HTTP probe failed with statuscode: 503
+4m44s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-2ptf7       Readiness probe failed: HTTP probe failed with statuscode: 503
+4m44s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-dwdz8         Readiness probe failed: HTTP probe failed with statuscode: 503
+4m43s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-8vnbs         Readiness probe failed: HTTP probe failed with statuscode: 503
+4m43s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-ck7hk         Readiness probe failed: HTTP probe failed with statuscode: 503
+4m30s                   Normal    Killing                        Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Stopping container vitrine-mip-04-11-2026
+4m30s (x3 over 5m)      Normal    SuccessfulRescale              HorizontalPodAutoscaler/vitrine-mip-04-11-2026    (combined from similar events): New size: 3; reason: All metrics below target
+4m30s (x3 over 5m)      Normal    ScalingReplicaSet              Deployment/vitrine-mip-04-11-2026                 (combined from similar events): Scaled down replica set vitrine-mip-04-11-2026-64b6684979 from 4 to 3
+4m27s                   Warning   Unhealthy                      Pod/vitrine-mip-04-11-2026-64b6684979-c2rfv       Readiness probe failed: Get "http://10.42.0.103:8080/readyz": dial tcp 10.42.0.103:8080: connect: connection refused
+4m15s                   Normal    ScalingReplicaSet              Deployment/stock-mip-04-11-2026                   Scaled down replica set stock-mip-04-11-2026-679c744b75 from 5 to 3
+4m15s                   Normal    SuccessfulRescale              HorizontalPodAutoscaler/stock-mip-04-11-2026      New size: 3; reason: All metrics below target
+4m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-ljsj5         Stopping container stock-mip-04-11-2026
+4m15s                   Normal    Killing                        Pod/stock-mip-04-11-2026-679c744b75-lxx7g         Stopping container stock-mip-04-11-2026
+4m13s                   Warning   Unhealthy                      Pod/stock-mip-04-11-2026-679c744b75-ljsj5         Readiness probe failed: HTTP probe failed with statuscode: 503

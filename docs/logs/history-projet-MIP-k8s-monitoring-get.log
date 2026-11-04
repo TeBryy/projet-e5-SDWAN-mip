@@ -1,0 +1,34 @@
+NAME                                                         READY   STATUS    RESTARTS      AGE
+pod/obs-mip-04-11-2026-grafana-7484d7c56f-22lhh              3/3     Running   3 (17m ago)   167m
+pod/obs-mip-04-11-2026-kube-state-metrics-8678b8c676-46gn4   1/1     Running   1 (17m ago)   174m
+pod/obs-mip-04-11-2026-operator-59c8dc8fc4-62kq9             1/1     Running   1 (17m ago)   174m
+pod/obs-mip-04-11-2026-prometheus-node-exporter-7dmss        1/1     Running   1 (17m ago)   174m
+pod/prometheus-obs-mip-04-11-2026-prometheus-0               2/2     Running   2 (17m ago)   174m
+
+NAME                                                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
+service/obs-mip-04-11-2026-grafana                    ClusterIP   10.43.116.179   <none>        80/TCP              174m
+service/obs-mip-04-11-2026-kube-state-metrics         ClusterIP   10.43.176.124   <none>        8080/TCP            174m
+service/obs-mip-04-11-2026-operator                   ClusterIP   10.43.162.162   <none>        443/TCP             174m
+service/obs-mip-04-11-2026-prometheus                 ClusterIP   10.43.230.65    <none>        9090/TCP,8080/TCP   174m
+service/obs-mip-04-11-2026-prometheus-node-exporter   ClusterIP   10.43.161.34    <none>        9100/TCP            174m
+service/prometheus-operated                           ClusterIP   None            <none>        9090/TCP            174m
+
+NAME                                                         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+daemonset.apps/obs-mip-04-11-2026-prometheus-node-exporter   1         1         1       1            1           kubernetes.io/os=linux   174m
+
+NAME                                                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/obs-mip-04-11-2026-grafana              1/1     1            1           174m
+deployment.apps/obs-mip-04-11-2026-kube-state-metrics   1/1     1            1           174m
+deployment.apps/obs-mip-04-11-2026-operator             1/1     1            1           174m
+
+NAME                                                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/obs-mip-04-11-2026-grafana-5b56b67cdd              0         0         0       174m
+replicaset.apps/obs-mip-04-11-2026-grafana-7484d7c56f              1         1         1       167m
+replicaset.apps/obs-mip-04-11-2026-kube-state-metrics-8678b8c676   1         1         1       174m
+replicaset.apps/obs-mip-04-11-2026-operator-59c8dc8fc4             1         1         1       174m
+
+NAME                                                        READY   AGE
+statefulset.apps/prometheus-obs-mip-04-11-2026-prometheus   1/1     174m
+
+NAME                                                   CLASS     HOSTS                            ADDRESS         PORTS   AGE
+ingress.networking.k8s.io/obs-mip-04-11-2026-grafana   traefik   grafana.192.168.1.110.sslip.io   192.168.1.110   80      174m
