@@ -1,5 +1,3 @@
-# values pour kube-prometheus-stack (version allégée pour un seul noeud)
-
 fullnameOverride: obs-mip-04-11-2026
 commonLabels:
   nom: peiffer
@@ -7,13 +5,11 @@ commonLabels:
   groupe: mip
   empreinte: MIP-04-11-2026
 
-# pas accessibles séparément sur k3s
 kubeControllerManager: { enabled: false }
 kubeScheduler: { enabled: false }
 kubeProxy: { enabled: false }
 kubeEtcd: { enabled: false }
 
-# pas besoin d'alertmanager pour le projet
 alertmanager: { enabled: false }
 
 prometheus:
@@ -50,7 +46,7 @@ grafana:
   ingress:
     enabled: true
     ingressClassName: traefik
-    hosts: [grafana.VM_IP.sslip.io]      # remplacé par install.sh
+    hosts: [grafana.VM_IP.sslip.io]
   sidecar:
     dashboards:
       enabled: true

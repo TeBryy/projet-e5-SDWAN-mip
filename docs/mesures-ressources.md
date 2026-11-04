@@ -1,7 +1,7 @@
 # Mesures CPU / RAM avant de fixer les limites
 
-On a lancé les 3 images avec docker, puis envoyé du trafic avec k6 (20 puis
-200 req/s) en regardant `docker stats`.
+On a lancé les 3 images avec docker, puis envoyé du trafic avec k6, à 20 puis
+200 req/s, en regardant `docker stats`.
 
 | Appli | RAM au repos | CPU à 20 req/s | CPU à 200 req/s | RAM à 200 req/s |
 |---|---|---|---|---|
@@ -18,7 +18,7 @@ On a lancé les 3 images avec docker, puis envoyé du trafic avec k6 (20 puis
 | paiement | 25m / 16Mi | 150m / 64Mi |
 
 - requests : à peu près la conso avec un trafic normal. Le HPA calcule son
-  pourcentage CPU par rapport à cette valeur (cible 70 %).
+  pourcentage CPU par rapport à cette valeur.
 - limits CPU : environ 4 fois le request, pour tenir un pic le temps que les
   nouveaux pods démarrent.
 - limits RAM : large par rapport à ce qu'on a mesuré, pour éviter les OOMKill.

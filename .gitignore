@@ -1,9 +1,7 @@
-# Secrets : jamais dans Git
 .env
 .env.*
 *.key
 kubeconfig*
-# Binaires Go
 apps/*/stock
 apps/*/vitrine
 apps/*/paiement

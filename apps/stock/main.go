@@ -1,4 +1,3 @@
-// stock-mip-04-11-2026 : API interne qui renvoie les produits et le stock en JSON
 package main
 
 import (
@@ -24,7 +23,6 @@ type Produit struct {
 	Stock        int    `json:"stock"`
 }
 
-// catalogue en dur (pas de base de données pour le MVP)
 var catalogue = []Produit{
 	{"beret", "Béret en laine", "Laine des Vosges, taille unique", 2490, 42},
 	{"mariniere", "Marinière", "Coton bio, coupe droite", 3990, 18},
@@ -45,7 +43,6 @@ func newMux(pod, env string, ready *atomic.Bool) *http.ServeMux {
 	parID := indexCatalogue()
 	mux := http.NewServeMux()
 
-	// en-tête X-Servi-Par pour voir quel pod a répondu
 	withPod := func(h http.HandlerFunc) http.HandlerFunc {
 		return func(w http.ResponseWriter, r *http.Request) {
 			w.Header().Set("X-Servi-Par", pod)
@@ -114,7 +111,6 @@ func main() {
 		}
 	}()
 
-	// arrêt propre sur SIGTERM (quand le HPA supprime des pods)
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, syscall.SIGTERM, syscall.SIGINT)
 	<-stop

@@ -1,5 +1,3 @@
-# HPA de 3 à 20 pods sur le CPU (70 %)
-# scale down après 60 s au lieu de 5 min par défaut, pour voir le retour à 3 plus vite
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:

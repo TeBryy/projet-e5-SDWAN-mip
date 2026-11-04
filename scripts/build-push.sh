@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Build des 3 images, test rapide avec docker run, puis push sur Docker Hub
-# (faire docker login avant)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 source config.env
@@ -10,12 +8,12 @@ NET=net-$FP
 
 for app in stock vitrine paiement; do
   img="$DOCKERHUB_USER/$app-$FP:$VERSION"
-  echo "==> build $img"
+  echo "build $img"
   docker build -t "$img" -t "$DOCKERHUB_USER/$app-$FP:latest" "apps/$app"
 done
 docker images | grep "$FP"
 
-echo "==> test des images en local"
+echo "test des images en local"
 docker network inspect "$NET" >/dev/null 2>&1 || docker network create "$NET"
 docker rm -f "stock-$FP" "vitrine-$FP" "paiement-$FP" 2>/dev/null || true
 docker run -d --name "stock-$FP" --network "$NET" "$DOCKERHUB_USER/stock-$FP:$VERSION"
@@ -33,7 +31,7 @@ for app in stock vitrine paiement; do
 done
 docker rm -f "stock-$FP" "vitrine-$FP" "paiement-$FP" >/dev/null
 
-echo "==> push Docker Hub"
+echo "push Docker Hub"
 for app in stock vitrine paiement; do
   docker push "$DOCKERHUB_USER/$app-$FP:$VERSION"
   docker push "$DOCKERHUB_USER/$app-$FP:latest"

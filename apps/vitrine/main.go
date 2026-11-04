@@ -1,5 +1,3 @@
-// vitrine-mip-04-11-2026 : site qui affiche les produits (via stock)
-// et envoie vers paiement pour acheter
 package main
 
 import (
@@ -68,7 +66,6 @@ func (a *app) accueil(w http.ResponseWriter, r *http.Request) {
 	p := page{Env: a.env, Pod: a.pod, URLPaiement: a.urlPaiement, Empreinte: empreinte}
 	produits, podStock, err := a.catalogue(r.Context())
 	if err != nil {
-		// si stock ne répond pas, la page s'affiche quand même
 		a.log.Warn("catalogue indisponible", "err", err)
 		p.Erreur = "Catalogue momentanément indisponible, réessayez dans un instant."
 	}

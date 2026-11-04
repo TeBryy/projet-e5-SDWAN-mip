@@ -1,4 +1,3 @@
-# job k6, lancé par scripts/test-charge.sh
 apiVersion: batch/v1
 kind: Job
 metadata:

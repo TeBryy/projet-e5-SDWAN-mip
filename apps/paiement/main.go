@@ -1,6 +1,3 @@
-// paiement-mip-04-11-2026 : paiement avec Stripe Checkout (mode test)
-// le prix est toujours repris depuis stock, pas depuis le navigateur
-// et l'appli refuse de démarrer avec une clé live
 package main
 
 import (
@@ -40,7 +37,6 @@ type app struct {
 	log                                                             *slog.Logger
 }
 
-// cleValide accepte seulement les clés de test
 func cleValide(k string) bool {
 	return strings.HasPrefix(k, "sk_test_") || strings.HasPrefix(k, "rk_test_")
 }
@@ -59,7 +55,6 @@ func (a *app) produit(ctx context.Context, id string) (Produit, error) {
 	return p, json.NewDecoder(resp.Body).Decode(&p)
 }
 
-// stripe appelle l'API Stripe
 func (a *app) stripe(ctx context.Context, method, path string, form url.Values, out any) error {
 	var body *strings.Reader
 	if form != nil {
@@ -104,7 +99,6 @@ func (a *app) checkout(w http.ResponseWriter, r *http.Request) {
 	f.Set("line_items[0][price_data][currency]", "eur")
 	f.Set("line_items[0][price_data][unit_amount]", fmt.Sprint(p.PrixCentimes))
 	f.Set("line_items[0][price_data][product_data][name]", p.Nom)
-	// metadata visibles dans le dashboard Stripe (env + pod)
 	for _, prefix := range []string{"metadata", "payment_intent_data[metadata]"} {
 		f.Set(prefix+"[empreinte]", empreinte)
 		f.Set(prefix+"[env]", a.env)

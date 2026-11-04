@@ -1,4 +1,3 @@
-# copie les hosts de la ConfigMap hosts-mip-04-11-2026 dans les Ingress
 apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
 replacements:

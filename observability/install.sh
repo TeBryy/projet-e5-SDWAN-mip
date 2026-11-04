@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Partie 3 : Prometheus + Grafana avec helm (kube-prometheus-stack)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 source config.env
@@ -9,7 +8,6 @@ CHART_VERSION="${CHART_VERSION:-92.17.1}"
 kubectl create namespace "$NS" --dry-run=client -o yaml | kubectl apply -f -
 kubectl label ns "$NS" nom=peiffer prenom=axel groupe=mip empreinte=MIP-04-11-2026 --overwrite
 
-# mot de passe grafana aléatoire dans un secret
 if ! kubectl get secret grafana-admin-mip-04-11-2026 -n "$NS" >/dev/null 2>&1; then
   MDP=$(head -c 18 /dev/urandom | base64 | tr -d '/+=')
   kubectl create secret generic grafana-admin-mip-04-11-2026 -n "$NS" \

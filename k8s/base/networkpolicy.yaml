@@ -1,5 +1,3 @@
-# tout est bloqué par défaut, puis on autorise :
-# traefik -> vitrine/paiement, vitrine/paiement -> stock, k6 -> tout
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -34,7 +32,6 @@ spec:
       ports:
         - { protocol: TCP, port: 8080 }
 ---
-# stock accepte seulement vitrine et paiement du même namespace
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -56,7 +53,6 @@ spec:
       ports:
         - { protocol: TCP, port: 8080 }
 ---
-# test de charge
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:

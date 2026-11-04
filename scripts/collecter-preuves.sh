@@ -1,20 +1,16 @@
 #!/usr/bin/env bash
-# Récupère les logs demandés dans docs/logs/ : historique, get, describe,
-# events et logs des pods pour chaque environnement.
-# Faire "history -a" avant de lancer le script.
 set -uo pipefail
 cd "$(dirname "$0")/.."
 source config.env
 L=docs/logs; mkdir -p "$L"
 P="history-projet-$GROUPE"
 
-# history ne marche pas directement dans un script, on passe par bash -i
 HISTTIMEFORMAT="%F %T " HISTFILE=~/.bash_history bash -ic 'history' > "$L/$P.log" 2>/dev/null || true
 [[ -s "$L/$P.log" ]] || cp ~/.bash_history "$L/$P.log" 2>/dev/null || true
-[[ -s "$L/$P.log" ]] || echo "Attention : Historique vide : lancez à la main  history > $L/$P.log" >&2
+[[ -s "$L/$P.log" ]] || echo "historique vide, faire : history > $L/$P.log" >&2
 
 {
-  echo "# Cluster : $(date '+%F %T')"; kubectl version; echo
+  echo "cluster $(date '+%F %T')"; kubectl version; echo
   kubectl get nodes -o wide; echo
   kubectl get ns --show-labels | grep -E "NAME|mip-04-11-2026"; echo
   helm list -A 2>/dev/null
@@ -40,6 +36,5 @@ if kubectl get ns "$ns" >/dev/null 2>&1; then
   kubectl events -n "$ns" > "$L/$P-k8s-monitoring-events.log" 2>&1
 fi
 
-# on vérifie qu'aucune clé stripe ne se retrouve dans les logs
 grep -rlE "sk_(test|live)_[A-Za-z0-9]{10,}" "$L" && { echo "Erreur : clé Stripe trouvée dans $L, à enlever avant de commit" >&2; exit 1; }
 ls -la "$L"

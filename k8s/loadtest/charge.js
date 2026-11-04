@@ -1,6 +1,3 @@
-// Test de charge k6 lancé dans le cluster (pour pouvoir tester stock aussi)
-// CIBLE = all | vitrine | stock | paiement, RPS_MAX = débit max
-// sur paiement on teste seulement GET / pour ne pas créer de sessions Stripe
 import http from 'k6/http';
 import { check } from 'k6';
 
@@ -15,7 +12,6 @@ const cibles = {
   paiement: `http://paiement-${FP}:8080/`,
 };
 
-// montée, palier de 3 min, puis descente
 function scenario(nom) {
   return {
     executor: 'ramping-arrival-rate',

@@ -1,5 +1,3 @@
-# paiement : Stripe Checkout, accessible de l'extérieur
-# la clé vient du secret créé par scripts/secret-stripe.sh
 apiVersion: v1
 kind: Service
 metadata:
@@ -64,7 +62,6 @@ spec:
                 secretKeyRef: { name: stripe-mip-04-11-2026, key: STRIPE_SECRET_KEY }
           envFrom:
             - configMapRef: { name: hosts-mip-04-11-2026 }
-          # voir docs/mesures-ressources.md
           resources:
             requests: { cpu: 25m, memory: 16Mi }
             limits:   { cpu: 150m, memory: 64Mi }

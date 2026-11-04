@@ -17,7 +17,6 @@ func TestPrix(t *testing.T) {
 	}
 }
 
-// Si stock est injoignable, la vitrine doit rester en ligne (mode dégradé).
 func TestModeDegrade(t *testing.T) {
 	a := &app{stockURL: "http://127.0.0.1:1", client: &http.Client{Timeout: 200 * time.Millisecond},
 		tpl: template.Must(template.ParseFS(fichiers, "templates/index.html")),

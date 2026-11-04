@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# Installe k3s, docker et helm sur la VM Ubuntu
-# sudo ./infra/install-k3s.sh <IP_VM>
-# (l'IP est obligatoire avec VirtualBox sinon k3s prend l'IP NAT 10.0.2.15)
 set -euo pipefail
 
 K3S_VERSION="${K3S_VERSION:-v1.33.5+k3s1}"
@@ -10,32 +7,30 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 UTILISATEUR="${SUDO_USER:-$USER}"
 HOME_UTIL="$(getent passwd "$UTILISATEUR" | cut -d: -f6)"
 
-echo "==> paquets"
+echo "paquets"
 apt-get update -qq
 apt-get install -y -qq curl git make jq apache2-utils docker.io >/dev/null
 usermod -aG docker "$UTILISATEUR"
 
-echo "==> config k3s"
-# 0644 sinon kubectl affiche permission denied (pas de secret dans ce fichier)
+echo "config k3s"
 install -D -m 0644 "$DIR/k3s-config.yaml" /etc/rancher/k3s/config.yaml
 if [[ -n "$VM_IP" ]]; then
   echo "node-external-ip: $VM_IP" >> /etc/rancher/k3s/config.yaml
 fi
 
-echo "==> installation k3s $K3S_VERSION"
+echo "installation k3s $K3S_VERSION"
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="$K3S_VERSION" sh -
 
-echo "==> kubeconfig pour $UTILISATEUR"
+echo "kubeconfig pour $UTILISATEUR"
 install -d -m 0700 -o "$UTILISATEUR" "$HOME_UTIL/.kube"
 install -m 0600 -o "$UTILISATEUR" /etc/rancher/k3s/k3s.yaml "$HOME_UTIL/.kube/config"
 
-echo "==> Helm"
+echo "Helm"
 curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-echo "==> alias k + historique avec la date"
+echo "alias k + historique avec la date"
 cat >> "$HOME_UTIL/.bashrc" <<'EOF'
 
-# --- projet E5 (mip-04-11-2026) ---
 export KUBECONFIG=$HOME/.kube/config
 export HISTTIMEFORMAT="%F %T "
 export HISTSIZE=100000 HISTFILESIZE=100000
@@ -46,7 +41,7 @@ alias k=kubectl
 complete -o default -F __start_kubectl k
 EOF
 
-echo "==> attente du noeud"
+echo "attente du noeud"
 until kubectl get nodes 2>/dev/null | grep -q " Ready"; do sleep 3; done
 kubectl get nodes -o wide
 echo

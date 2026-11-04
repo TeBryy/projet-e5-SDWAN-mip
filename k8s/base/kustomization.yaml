@@ -1,4 +1,3 @@
-# base commune aux 4 environnements
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
@@ -11,7 +10,6 @@ resources:
   - hpa.yaml
   - ingress.yaml
 
-# labels sur tous les objets (nom/prenom sont mis dans chaque fichier)
 labels:
   - pairs:
       groupe: mip
@@ -23,7 +21,6 @@ labels:
     includeTemplates: true
     includeSelectors: false
 
-# images docker hub (mises à jour par scripts/configure.sh)
 images:
   - name: DOCKERHUB_USER/stock-mip-04-11-2026
     newName: axelirsutti/stock-mip-04-11-2026

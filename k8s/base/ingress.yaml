@@ -1,5 +1,3 @@
-# Ingress Traefik pour vitrine et paiement
-# les hosts sont remplacés dans chaque overlay (fichier hosts.env)
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

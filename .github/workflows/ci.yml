@@ -1,4 +1,3 @@
-# CI : tests go, vérif des manifests, build + scan trivy, push docker hub
 name: ci-mip-04-11-2026
 
 on:

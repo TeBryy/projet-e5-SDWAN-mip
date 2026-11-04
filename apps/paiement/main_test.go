@@ -23,7 +23,6 @@ func TestCleValide(t *testing.T) {
 	}
 }
 
-// Le prix envoyé à Stripe doit venir du service stock, jamais du client.
 func TestCheckoutUtiliseLePrixDuStock(t *testing.T) {
 	stock := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(Produit{ID: "mug", Nom: "Mug", PrixCentimes: 1290, Stock: 3})
@@ -46,7 +45,6 @@ func TestCheckoutUtiliseLePrixDuStock(t *testing.T) {
 		client: http.DefaultClient, log: slog.New(slog.NewTextHandler(io.Discard, nil)),
 		tpl: template.Must(template.ParseFS(fichiers, "templates/*.html"))}
 
-	// Un client malveillant tente d'imposer un prix : il doit être ignoré.
 	req := httptest.NewRequest("POST", "/checkout", strings.NewReader("produit=mug&prix=1"))
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	rec := httptest.NewRecorder()
