@@ -5,8 +5,12 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 source config.env
 [[ -f .env.stripe ]] || { echo "Erreur : créer .env.stripe avec STRIPE_SECRET_KEY=sk_test_..." >&2; exit 1; }
-source .env.stripe
-[[ "$STRIPE_SECRET_KEY" =~ ^(sk|rk)_test_ ]] || { echo "Erreur : il faut une clé de test (sk_test_)" >&2; exit 1; }
+# lecture avec grep et pas source, sinon la clé s'affiche si le fichier est mal rempli
+STRIPE_SECRET_KEY=$( (grep -E '^STRIPE_SECRET_KEY=' .env.stripe || true) | head -1 | cut -d= -f2- | tr -d '[:space:]"')
+if [[ ! "$STRIPE_SECRET_KEY" =~ ^(sk|rk)_test_ ]]; then
+  echo "Erreur : .env.stripe doit contenir STRIPE_SECRET_KEY=sk_test_... (clé de test)" >&2
+  exit 1
+fi
 
 for env in ${1:-$ENVS}; do
   ns="$env-mip-04-11-2026"
