@@ -26,11 +26,11 @@ labels:
 # images docker hub (mises à jour par scripts/configure.sh)
 images:
   - name: DOCKERHUB_USER/stock-mip-04-11-2026
-    newName: DOCKERHUB_USER/stock-mip-04-11-2026
+    newName: axelirsutti/stock-mip-04-11-2026
     newTag: "1.0.0"
   - name: DOCKERHUB_USER/vitrine-mip-04-11-2026
-    newName: DOCKERHUB_USER/vitrine-mip-04-11-2026
+    newName: axelirsutti/vitrine-mip-04-11-2026
     newTag: "1.0.0"
   - name: DOCKERHUB_USER/paiement-mip-04-11-2026
-    newName: DOCKERHUB_USER/paiement-mip-04-11-2026
+    newName: axelirsutti/paiement-mip-04-11-2026
     newTag: "1.0.0"
