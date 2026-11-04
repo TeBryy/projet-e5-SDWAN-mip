@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # Installe k3s, docker et helm sur la VM Ubuntu
-# sudo ./infra/install-k3s.sh
+# sudo ./infra/install-k3s.sh <IP_VM>
+# (l'IP est obligatoire avec VirtualBox sinon k3s prend l'IP NAT 10.0.2.15)
 set -euo pipefail
 
 K3S_VERSION="${K3S_VERSION:-v1.33.5+k3s1}"
+VM_IP="${1:-}"
 DIR="$(cd "$(dirname "$0")" && pwd)"
 UTILISATEUR="${SUDO_USER:-$USER}"
 HOME_UTIL="$(getent passwd "$UTILISATEUR" | cut -d: -f6)"
@@ -14,7 +16,11 @@ apt-get install -y -qq curl git make jq apache2-utils docker.io >/dev/null
 usermod -aG docker "$UTILISATEUR"
 
 echo "==> config k3s"
-install -D -m 0600 "$DIR/k3s-config.yaml" /etc/rancher/k3s/config.yaml
+# 0644 sinon kubectl affiche permission denied (pas de secret dans ce fichier)
+install -D -m 0644 "$DIR/k3s-config.yaml" /etc/rancher/k3s/config.yaml
+if [[ -n "$VM_IP" ]]; then
+  echo "node-external-ip: $VM_IP" >> /etc/rancher/k3s/config.yaml
+fi
 
 echo "==> installation k3s $K3S_VERSION"
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="$K3S_VERSION" sh -
