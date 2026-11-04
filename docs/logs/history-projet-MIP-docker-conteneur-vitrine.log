@@ -1,0 +1,1 @@
+{"time":"2026-11-04T13:21:15.143502187Z","level":"INFO","msg":"démarrage","app":"vitrine-mip-04-11-2026","env":"local","pod":"11326eb65165","addr":":8080","stock":"http://stock-mip-04-11-2026:8080","paiement":"http://localhost:8082"}

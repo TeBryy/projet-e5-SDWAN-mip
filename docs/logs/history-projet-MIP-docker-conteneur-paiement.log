@@ -1,0 +1,1 @@
+{"time":"2026-11-04T13:21:18.766220136Z","level":"INFO","msg":"démarrage","app":"paiement-mip-04-11-2026","env":"local","pod":"8d462fc3ab95","addr":":8080","stripe":"https://api.stripe.com","cle":"sk_test_…"}
