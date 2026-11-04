@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comptoir Lorrain - {{.Env}}</title>
+<style>
+  :root { --bleu:#1f3a5f; --fond:#f6f3ee; --texte:#1d1d1b; --accent:#c8553d; --gris:#6b6b6b; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Georgia, "Times New Roman", serif; background:var(--fond); color:var(--texte); }
+  header { background:var(--bleu); color:#fff; padding:28px 16px; }
+  header div, main, footer { max-width:960px; margin:0 auto; }
+  h1 { margin:0; font-size:2rem; letter-spacing:.5px; }
+  .env { display:inline-block; margin-top:8px; padding:2px 10px; border:1px solid #fff; border-radius:2px; font:13px monospace; }
+  main { padding:24px 16px; display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+  .carte { background:#fff; border:1px solid #e2ddd3; padding:18px; display:flex; flex-direction:column; gap:8px; }
+  .carte h2 { margin:0; font-size:1.2rem; }
+  .carte p { margin:0; color:var(--gris); font-size:.95rem; flex:1; }
+  .prix { font-size:1.3rem; font-weight:bold; }
+  button { font:inherit; padding:10px; border:0; background:var(--accent); color:#fff; cursor:pointer; width:100%; }
+  button:disabled { background:#bbb; cursor:not-allowed; }
+  .erreur { grid-column:1/-1; background:#fff3cd; border:1px solid #e0c36b; padding:14px; }
+  footer { padding:16px; font:12px monospace; color:var(--gris); }
+</style>
+</head>
+<body>
+<header><div>
+  <h1>Comptoir Lorrain</h1>
+  <span class="env">env : {{.Env}}</span>
+</div></header>
+<main>
+  {{if .Erreur}}<div class="erreur">{{.Erreur}}</div>{{end}}
+  {{range .Produits}}
+  <form class="carte" method="post" action="{{$.URLPaiement}}/checkout">
+    <h2>{{.Nom}}</h2>
+    <p>{{.Description}}</p>
+    <div class="prix">{{.Prix}}</div>
+    <input type="hidden" name="produit" value="{{.ID}}">
+    {{if gt .Stock 0}}<button type="submit">Acheter ({{.Stock}} en stock)</button>
+    {{else}}<button type="button" disabled>Rupture de stock</button>{{end}}
+  </form>
+  {{end}}
+</main>
+<footer>
+  servi par {{.Pod}} · catalogue servi par {{if .PodStock}}{{.PodStock}}{{else}}-{{end}} · empreinte {{.Empreinte}} · paiement en mode test Stripe (carte 4242 4242 4242 4242)
+</footer>
+</body>
+</html>

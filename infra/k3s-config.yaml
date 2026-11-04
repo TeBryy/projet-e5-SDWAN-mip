@@ -1,0 +1,19 @@
+# Config k3s, copiée dans /etc/rancher/k3s/config.yaml par install-k3s.sh
+# (k3s a déjà Traefik, CoreDNS, metrics-server et les NetworkPolicy)
+
+write-kubeconfig-mode: "0600"
+
+node-name: node-mip-04-11-2026
+node-label:
+  - "groupe=mip"
+  - "empreinte=MIP-04-11-2026"
+
+kubelet-arg:
+  # 110 pods max par défaut, pas assez avec 4 envs + le test de charge
+  - "max-pods=250"
+  # on garde des ressources pour le système pendant les tests de charge
+  - "system-reserved=cpu=250m,memory=512Mi"
+  - "eviction-hard=memory.available<200Mi"
+
+# secrets chiffrés dans la base de k3s
+secrets-encryption: true

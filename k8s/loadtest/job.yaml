@@ -1,0 +1,42 @@
+# job k6, lancé par scripts/test-charge.sh
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: loadtest-mip-04-11-2026
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 3600
+  template:
+    metadata:
+      labels:
+        app: loadtest-mip-04-11-2026
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 12345
+        runAsGroup: 12345
+        seccompProfile: { type: RuntimeDefault }
+      containers:
+        - name: k6-mip-04-11-2026
+          image: grafana/k6:0.54.0
+          args: ["run", "--summary-trend-stats=avg,med,p(95),max", "/scripts/charge.js"]
+          env:
+            - { name: CIBLE, value: "all" }
+            - { name: RPS_MAX, value: "800" }
+          resources:
+            requests: { cpu: 200m, memory: 128Mi }
+            limits:   { cpu: "2", memory: 1Gi }
+          volumeMounts:
+            - { name: scripts, mountPath: /scripts, readOnly: true }
+            - { name: tmp, mountPath: /tmp }
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: { drop: ["ALL"] }
+      volumes:
+        - name: scripts
+          configMap: { name: loadtest-script-mip-04-11-2026 }
+        - name: tmp
+          emptyDir: {}

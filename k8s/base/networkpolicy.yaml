@@ -1,0 +1,79 @@
+# tout est bloqué par défaut, puis on autorise :
+# traefik -> vitrine/paiement, vitrine/paiement -> stock, k6 -> tout
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-all-ingress-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  podSelector: {}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-traefik-publiques-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  podSelector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values: [vitrine-mip-04-11-2026, paiement-mip-04-11-2026]
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels: { kubernetes.io/metadata.name: kube-system }
+          podSelector:
+            matchLabels: { app.kubernetes.io/name: traefik }
+      ports:
+        - { protocol: TCP, port: 8080 }
+---
+# stock accepte seulement vitrine et paiement du même namespace
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-stock-interne-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  podSelector:
+    matchLabels: { app: stock-mip-04-11-2026 }
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - podSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values: [vitrine-mip-04-11-2026, paiement-mip-04-11-2026]
+      ports:
+        - { protocol: TCP, port: 8080 }
+---
+# test de charge
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-loadtest-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  podSelector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values: [vitrine-mip-04-11-2026, paiement-mip-04-11-2026, stock-mip-04-11-2026]
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels: { app: loadtest-mip-04-11-2026 }
+      ports:
+        - { protocol: TCP, port: 8080 }

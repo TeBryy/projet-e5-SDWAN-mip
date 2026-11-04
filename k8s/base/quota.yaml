@@ -1,0 +1,32 @@
+# quota par environnement (prévu pour 3 x 20 pods + le pod k6)
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quota-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  hard:
+    pods: "70"
+    requests.cpu: "3"
+    requests.memory: 1536Mi
+    limits.cpu: "12"
+    limits.memory: 5Gi
+    services.nodeports: "0"
+    services.loadbalancers: "0"
+---
+# valeurs par défaut si un conteneur n'a pas de resources
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limites-defaut-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  limits:
+    - type: Container
+      defaultRequest: { cpu: 25m, memory: 16Mi }
+      default: { cpu: 100m, memory: 64Mi }
+      max: { cpu: "2", memory: 1Gi }

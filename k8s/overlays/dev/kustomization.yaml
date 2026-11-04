@@ -1,0 +1,24 @@
+# environnement dev
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: dev-mip-04-11-2026
+
+resources:
+  - namespace.yaml
+  - ../../base
+
+labels:
+  - pairs:
+      env: dev
+    includeTemplates: true
+    includeSelectors: false
+
+configMapGenerator:
+  - name: hosts-mip-04-11-2026
+    envs: [hosts.env]
+    options:
+      labels: { nom: mahaut, prenom: bryan }
+
+components:
+  - ../../components/hosts

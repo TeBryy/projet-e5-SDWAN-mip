@@ -1,0 +1,81 @@
+# paiement : Stripe Checkout, accessible de l'extérieur
+# la clé vient du secret créé par scripts/secret-stripe.sh
+apiVersion: v1
+kind: Service
+metadata:
+  name: paiement-mip-04-11-2026
+  labels:
+    nom: irsutti
+    prenom: axel
+spec:
+  type: ClusterIP
+  selector:
+    app: paiement-mip-04-11-2026
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paiement-mip-04-11-2026
+  labels:
+    nom: irsutti
+    prenom: axel
+spec:
+  replicas: 3
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: paiement-mip-04-11-2026
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: { maxUnavailable: 0, maxSurge: 1 }
+  template:
+    metadata:
+      labels:
+        nom: irsutti
+        prenom: axel
+        app: paiement-mip-04-11-2026
+        app.kubernetes.io/name: paiement
+        app.kubernetes.io/component: paiement-stripe
+    spec:
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 20
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65532
+        runAsGroup: 65532
+        seccompProfile: { type: RuntimeDefault }
+      containers:
+        - name: paiement-mip-04-11-2026
+          image: DOCKERHUB_USER/paiement-mip-04-11-2026
+          imagePullPolicy: IfNotPresent
+          ports:
+            - { name: http, containerPort: 8080 }
+          env:
+            - name: APP_ENV
+              valueFrom: { fieldRef: { fieldPath: metadata.namespace } }
+            - name: STOCK_URL
+              value: http://stock-mip-04-11-2026:8080
+            - name: STRIPE_SECRET_KEY
+              valueFrom:
+                secretKeyRef: { name: stripe-mip-04-11-2026, key: STRIPE_SECRET_KEY }
+          envFrom:
+            - configMapRef: { name: hosts-mip-04-11-2026 }
+          # voir docs/mesures-ressources.md
+          resources:
+            requests: { cpu: 25m, memory: 16Mi }
+            limits:   { cpu: 150m, memory: 64Mi }
+          readinessProbe:
+            httpGet: { path: /readyz, port: http }
+            periodSeconds: 5
+          livenessProbe:
+            httpGet: { path: /healthz, port: http }
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: { drop: ["ALL"] }

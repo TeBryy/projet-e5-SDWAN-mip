@@ -1,0 +1,37 @@
+# Ingress Traefik pour vitrine et paiement
+# les hosts sont remplacés dans chaque overlay (fichier hosts.env)
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vitrine-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: HOST_VITRINE
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service: { name: vitrine-mip-04-11-2026, port: { name: http } }
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: paiement-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: HOST_PAIEMENT
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service: { name: paiement-mip-04-11-2026, port: { name: http } }

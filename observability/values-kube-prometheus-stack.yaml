@@ -1,0 +1,58 @@
+# values pour kube-prometheus-stack (version allégée pour un seul noeud)
+
+fullnameOverride: obs-mip-04-11-2026
+commonLabels:
+  nom: peiffer
+  prenom: axel
+  groupe: mip
+  empreinte: MIP-04-11-2026
+
+# pas accessibles séparément sur k3s
+kubeControllerManager: { enabled: false }
+kubeScheduler: { enabled: false }
+kubeProxy: { enabled: false }
+kubeEtcd: { enabled: false }
+
+# pas besoin d'alertmanager pour le projet
+alertmanager: { enabled: false }
+
+prometheus:
+  prometheusSpec:
+    retention: 3d
+    scrapeInterval: 15s
+    resources:
+      requests: { cpu: 100m, memory: 400Mi }
+      limits:   { memory: 1Gi }
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+
+prometheusOperator:
+  resources:
+    requests: { cpu: 50m, memory: 64Mi }
+
+kube-state-metrics:
+  resources:
+    requests: { cpu: 20m, memory: 64Mi }
+
+prometheus-node-exporter:
+  resources:
+    requests: { cpu: 20m, memory: 32Mi }
+
+grafana:
+  admin:
+    existingSecret: grafana-admin-mip-04-11-2026
+    userKey: admin-user
+    passwordKey: admin-password
+  defaultDashboardsTimezone: Europe/Paris
+  resources:
+    requests: { cpu: 50m, memory: 128Mi }
+    limits:   { memory: 256Mi }
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    hosts: [grafana.VM_IP.sslip.io]      # remplacé par install.sh
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+      searchNamespace: ALL

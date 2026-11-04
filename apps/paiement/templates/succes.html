@@ -1,0 +1,11 @@
+{{define "succes.html"}}{{template "haut" .}}
+<h1>Merci pour votre commande</h1>
+<p>Statut vérifié côté serveur auprès de l'API Stripe :</p>
+<dl>
+  <dt>Statut</dt><dd>{{.Statut}}</dd>
+  <dt>Montant</dt><dd>{{.Montant}}</dd>
+  <dt>Email</dt><dd>{{.Email}}</dd>
+  <dt>Session</dt><dd>{{.Session}}</dd>
+</dl>
+<p><a href="{{.Vitrine}}">Retour à la vitrine</a></p>
+{{template "bas" .}}{{end}}

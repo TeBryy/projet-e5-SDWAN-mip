@@ -1,0 +1,12 @@
+# copie les hosts de la ConfigMap hosts-mip-04-11-2026 dans les Ingress
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+replacements:
+  - source: { kind: ConfigMap, name: hosts-mip-04-11-2026, fieldPath: data.HOST_VITRINE }
+    targets:
+      - select: { kind: Ingress, name: vitrine-mip-04-11-2026 }
+        fieldPaths: [spec.rules.0.host]
+  - source: { kind: ConfigMap, name: hosts-mip-04-11-2026, fieldPath: data.HOST_PAIEMENT }
+    targets:
+      - select: { kind: Ingress, name: paiement-mip-04-11-2026 }
+        fieldPaths: [spec.rules.0.host]

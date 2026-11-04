@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: preprod-mip-04-11-2026
+  labels:
+    nom: mahaut
+    prenom: bryan
+    groupe: mip
+    # pod security : refuse les pods root / privilégiés
+    pod-security.kubernetes.io/enforce: restricted
+    pod-security.kubernetes.io/enforce-version: latest

@@ -1,0 +1,15 @@
+# dashboard grafana (chargé automatiquement grâce au label grafana_dashboard)
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: monitoring-mip-04-11-2026
+configMapGenerator:
+  - name: dashboard-autoscaling-mip-04-11-2026
+    files: [dashboard-autoscaling.json]
+    options:
+      disableNameSuffixHash: true
+      labels:
+        grafana_dashboard: "1"
+        nom: peiffer
+        prenom: axel
+        groupe: mip
+        empreinte: MIP-04-11-2026

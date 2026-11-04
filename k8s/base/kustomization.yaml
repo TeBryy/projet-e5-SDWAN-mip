@@ -1,0 +1,36 @@
+# base commune aux 4 environnements
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - quota.yaml
+  - networkpolicy.yaml
+  - stock.yaml
+  - vitrine.yaml
+  - paiement.yaml
+  - hpa.yaml
+  - ingress.yaml
+
+# labels sur tous les objets (nom/prenom sont mis dans chaque fichier)
+labels:
+  - pairs:
+      groupe: mip
+      membres: mahaut-irsutti-peiffer
+      empreinte: MIP-04-11-2026
+      projet: e5-5sdwana
+      app.kubernetes.io/part-of: comptoir-lorrain
+      app.kubernetes.io/managed-by: kustomize
+    includeTemplates: true
+    includeSelectors: false
+
+# images docker hub (mises à jour par scripts/configure.sh)
+images:
+  - name: DOCKERHUB_USER/stock-mip-04-11-2026
+    newName: DOCKERHUB_USER/stock-mip-04-11-2026
+    newTag: "1.0.0"
+  - name: DOCKERHUB_USER/vitrine-mip-04-11-2026
+    newName: DOCKERHUB_USER/vitrine-mip-04-11-2026
+    newTag: "1.0.0"
+  - name: DOCKERHUB_USER/paiement-mip-04-11-2026
+    newName: DOCKERHUB_USER/paiement-mip-04-11-2026
+    newTag: "1.0.0"
